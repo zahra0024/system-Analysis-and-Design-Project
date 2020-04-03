@@ -205,6 +205,15 @@ ul{
     background: #f5f5f5;
     padding: 0;
 }
+.navbar-dark .navbar-nav .nav-link{
+    color:  #38a7bb;
+}
+.navbar-dark .navbar-nav .nav-link:hover{
+    color:  #38a7bb;
+}
+.navbar-dark .navbar-nav .nav-link:focus{
+    color:  #38a7bb;
+}
 nav ul li{
     line-height: 2;
 }
@@ -227,10 +236,32 @@ nav ul li:hover{
 
 /* end of header */
 
-/* start of first-sidebar */
-#badge-slider-0{
+/* start of first-slider */
+.badge-off-custom-0{
     line-height: 2;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
 }
+.owl-carousel-0 .owl-dots{
+    display: none;
+}
+.owl-carousel-0 .owl-stage-outer{
+    height: 412px;
+}
+.owl-carousel-0 .owl-nav{
+    color:#38a7bb;
+}
+.owl-carousel-0 .owl-nav:hover{
+    color: #38a7bb;
+}
+.sidebar-text{
+    font-size: 12px;
+    text-align: center;
+    color: #4a5f73;
+}
+/* end of first-slider*/
 #badge-slider{
     line-height: 2;
     position: absolute;
@@ -244,41 +275,8 @@ nav ul li:hover{
 }
 .service-text{
 vertical-align: -10px;
-
 }
 /* end of first-sidebar */
-
-/* styles of slider-2 */
-#slider-2-off{
-    width: 90px;
-}
-#slider-2-font{
-    font-size: 12px;
-}
-#card-slider-2{
-    border: 0;
-    box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
-}
-#card-slider-2:hover{
-    box-shadow: 0 10px 20px rgba(0,0,0,.19);
-}
-/* end of slider-2 */
-
-/* styles of services */
-
-.service-text{
-    width: 200px;
-    text-align: center;
-}
-/* end of styles of services */
-
-/* styles of slider-1 */
-.service-text{
-    font-size: 12px;
-    text-align: center;
-    color: #606060;
-}
-/* end of slider-1 */
 /*styles of slider with plugin*/
 .card-header-custom{
     height: 50px;
@@ -316,6 +314,9 @@ vertical-align: -10px;
 }
 .add-cart{
     line-height: 2;
+}
+.text-price{
+    font-size: 13px;
 }
 .owl-dots{
     display: none;
