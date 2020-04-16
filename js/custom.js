@@ -46,6 +46,10 @@ $(document).ready(function () {
             }
         }
     });
+    $('.accordion .title').click(function () {
+       $(this).parent().toggleClass('active');
+    });
+    $('.sale-timeout-counter').startTimer();
 
 });
 
