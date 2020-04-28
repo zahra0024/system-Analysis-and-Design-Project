@@ -804,6 +804,60 @@ nav ul li:hover{
 }
 /* end of best-seller */
 
+/* start of sidebar / category_1 */
+.accordion .content input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background: #38a7bb;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+}
+.accordion .content input[type=range]::-moz-range-thumb{
+    -webkit-appearance: none;
+    background: #38a7bb;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+}
+.ios-switch{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.ios-switch .switch-body{
+    width: 48px;
+    border: 1px solid gray;
+    background: #ddd;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+.ios-switch .switch-body .toggle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    float: left;
+    transition: all .4s ease;
+    cursor: pointer;
+}
+.ios-switch.active .switch-body{
+    background: #38a7bb;
+    transition: all .4s ease;
+}
+.ios-switch.active .switch-body .toggle{
+    transform: translateX(135%);
+}
+.ios-switch input[type=checkbox]{
+    display: none;
+}
+.ios-switch label{
+    font-size: 13px;
+    color: #195a8e;
+    font-weight: bold;
+    margin-right: 10px;
+}
+/* end of sidebar / category_1 */
+
 /* styles of content of category_1 */
 .sort{
     color: #cecece;
