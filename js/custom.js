@@ -3,6 +3,15 @@ $(document).ready(function () {
         $('.search-icon').toggleClass('active');
         $('.search-wrapper').toggleClass('active');
     });
+    $('.field-wrapper input').keyup(function () {
+        if($(this).val().length > 0){
+            $(this).parent().addClass('active');
+        }else{
+            $(this).parent().removeClass('active');
+        }
+
+    });
+
     $('.owl-carousel-0').owlCarousel({
         items:1,
         rtl: true,
@@ -14,35 +23,35 @@ $(document).ready(function () {
                 items:1
             },
             600:{
-                items:2
+                items:1
             },
             800:{
-                items:3
+                items:1
             },
             1200:{
                 items:1
             }
         }
-    })
-    var owl = $('.owl-carousel');
+    });
+    let owl = $('.owl-carousel');
     owl.owlCarousel({
-        items: 4,
+        items: 5,
         rtl: true,
         margin: 25,
         nav: true,
         loop: true,
         responsive: {
             0: {
-                items: 1
-            },
-            600: {
                 items: 2
             },
-            1000: {
+            600: {
                 items: 3
             },
+            1000: {
+                items: 4
+            },
             1200:{
-                items:4
+                items:5
             }
         }
     });
@@ -53,7 +62,7 @@ $(document).ready(function () {
 
 //    ios switch
     let switches = document.querySelectorAll('.ios-switch');
-    for (var i = 0; i <= switches.length ; i++){
+    for (let i = 0; i <= switches.length ; i++){
         switches[i].addEventListener('click',function (event) {
             if (this.classList.contains('active')){
                 this.classList.remove('active');
