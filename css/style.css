@@ -1,9 +1,9 @@
 @font-face {
-    font-family: 'sahel';
-    src:url("../font/Sahel.eot")format("eot");
-    src: url("../font/Sahel.woff")format("woff"),
-    url("../font/Sahel.woff2")format("woff2"),
-    url("../font/Sahel.ttf")format("truetype"),
+    font-family: 'vazir';
+    src:url("../font/vazir.eot")format("eot");
+    src: url("../font/vazir.woff")format("woff"),
+    url("../font/vazir.woff2")format("woff2"),
+    url("../font/vazir.ttf")format("truetype"),
     url("../fonts/irsans.eot?#iefix") format("embedded-opentype");
     font-style: normal;
     font-weight: normal;
@@ -33,7 +33,7 @@
     font-feature-settings: 'liga';
 }
 body{
-    font-family: sahel;
+    font-family: "vazir";
     margin: 0;
     padding: 0;
     background: #eee;
@@ -195,7 +195,7 @@ input:focus{
 
 /* styles of header */
 #header-container{
-    background: #f5f5f5;
+    background:#dfe6e9;
 }
 #line{
     color: #777;
@@ -229,6 +229,10 @@ input:focus{
 .dropdown-toggle::after{
     content: none;
 }
+.dropdown-title{
+    color: #29a7d5!important;
+    font-size: 12px;
+}
 nav ul li{
     line-height: 2;
     padding: 0 7px;
@@ -236,19 +240,25 @@ nav ul li{
 nav ul li a span{
     color: #000;
 }
-nav ul li:hover{
-    border-bottom: 2px solid #38a7bb;
-}
 .list-group-menu-font{
-    font-size: 11px;
+    font-size: 12px;
     color: #000;
+}
+.dropdown-divider{
+    border-bottom: 1px solid #ddd !important;
+}
+.dropdown-menu img{
+    position: absolute;
+    bottom: 0;
+    left: -30px;
+}
+.list-group-item a:hover{
+    color: #d42148!important;
 }
 .dropdown-menu-color{
     background: #f1f2f6;
-}
-#list-goup-item-hover:hover{
-    background: #fff!important;
-    color: #000;
+    border-bottom: 2px solid #38a7bb;
+    border-top: 2px solid #eee;
 }
 /* end of header */
 
