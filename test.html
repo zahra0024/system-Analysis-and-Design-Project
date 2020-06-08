@@ -21,6 +21,38 @@
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/owl.carousel.min.js"></script>
 </head>
+<style>
+    .navbar-color{
+        background:#dfe6e9;
+    }
+    nav ul li .nav-item-font{
+        font-size: 12px;
+        color: #101a27;
+    }
+    nav ul li .dropdown-menu{
+        background:#dfe6e9;
+    }
+    nav ul li .dropdown-menu ul li{
+        background:#dfe6e9;
+    }
+    nav ul li .dropdown-menu .sub-dropdown-title{
+        font-size: 11px;
+        color: #38a7bb;
+    }
+    nav ul li .dropdown-menu .sub-dropdown-menu{
+        font-size: 10px;
+        font-weight: bold;
+    }
+    nav ul li .dropdown-menu li{
+        line-height: 18px;
+    }
+    nav ul li .dropdown-menu i{
+        font-size: 12px;
+        font-weight: bold;
+        vertical-align: -4px;
+        color: #38a7bb;
+    }
+</style>
 <body>
 <!-- top header -->
 <div class="container-fluid" id="top-header-container">
@@ -52,457 +84,83 @@
 <!-- end of search-wrapper -->
 <!-- end of top header -->
 
-<!-- start of header -->
-<!--<nav class="navbar navbar-light navbar-expand-md pr-0" id="navbar">-->
-    <!--<div class="container-fluid" id="header-container">-->
-        <!--<div class="row">-->
-            <!--<button type="button" class="navbar-toggler mr-3" id="#button" data-toggle="collapse"-->
-                    <!--data-target="#mynavbar">-->
-                <!--<span class="navbar-toggler-icon"></span>-->
-            <!--</button>-->
-            <!--<div class="collapse navbar-collapse" id="mynavbar">-->
-                <!--<ul class="navbar-nav mr-3">-->
-                    <!--<li class="nav-item ">-->
-                        <!--<a href="category.html" class="nav-link"><span class="header-font mr-2 ml-2 mt-2">سوپرمارکت</span></a>-->
-                    <!--</li>-->
-                    <!--<li class="nav-item ">-->
-                        <!--<a href="" class="nav-link dropdown-toggle" data-toggle="dropdown"><span-->
-                                <!--class="header-font mr-2 ml-2 mt-2">زیبایی و سلامت</span></a>-->
-                        <!--<div class="dropdown-menu w-100 border-0 py-0 m-0">-->
-                            <!--<div class="container-fluid dropdown-menu-color">-->
-                                <!--<div class="row w-100">-->
-                                    <!--<div class="col-12 col-md-4 col-lg-3">-->
-                                        <!--<div class="alert py-0 mb-0">-->
-                                            <!--<span class="dropdown-title">آرایش ناخن</span>-->
-                                        <!--</div>-->
-                                        <!--<ul class="list-group">-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">ناخن-->
-                                                <!--گیر و گوشه گیر</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">لاک-->
-                                                <!--پاک کن</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#"-->
-                                                                                                        <!--class="list-group-menu-font">لاک</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">سوهان-->
-                                                <!--ناخن</a></li>-->
-                                            <!--<div class="dropdown-divider"></div>-->
-                                            <!--<div class="alert py-0 mb-0">-->
-                                                <!--<span class="dropdown-title">آرایش ناخن</span>-->
-                                            <!--</div>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">رژلب-->
-                                                <!--مایع</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">رژلب-->
-                                                <!--جامد</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">بالم-->
-                                                <!--لب</a></li>-->
-                                        <!--</ul>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-12 col-md-4 col-lg-3">-->
-                                        <!--<div class="alert py-0 mb-0">-->
-                                            <!--<span class="dropdown-title">آرایش چشم</span>-->
-                                        <!--</div>-->
-                                        <!--<ul class="list-group">-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">فر-->
-                                                <!--موژه</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">ریمل</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">مداد-->
-                                                <!--چشم</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">خط-->
-                                                <!--چشم</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">کانسیلر</a>-->
-                                            <!--</li>-->
-                                            <!--<div class="dropdown-divider"></div>-->
-                                            <!--<div class="alert py-0 mb-0">-->
-                                                <!--<span class="dropdown-title">آرایش مو</span>-->
-                                            <!--</div>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">اکسیدان</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">رنگ-->
-                                                <!--مو</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">اسپری-->
-                                                <!--مو</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">ژل-->
-                                                <!--مو</a></li>-->
-                                        <!--</ul>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-12 col-md-4 col-lg-3">-->
-                                        <!--<div class="alert  py-0 mb-0">-->
-                                            <!--<span class="dropdown-title">آرایش صورت</span>-->
-                                        <!--</div>-->
-                                        <!--<ul class="list-group">-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">پد-->
-                                                <!--آرایشی</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">ضدآفتاب</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">کرم-->
-                                                <!--پودر</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#"-->
-                                                                                                        <!--class="list-group-menu-font">پنکیک</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">رژگونه</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">پرایمر</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">مدادابرو</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">آکوا</a></li>-->
-                                        <!--</ul>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-12 col-md-4 col-lg-3">-->
-                                        <!--<img src="../assets/images/skincare-1.jpg" class="img-fluid d-none d-lg-block" style="height: 375px" alt="">-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</li>-->
-                    <!--<li class="nav-item ">-->
-                        <!--<a href="" class="nav-link dropdown-toggle" data-toggle="dropdown"><span-->
-                                <!--class="header-font mr-2 ml-2 mt-2">خانه و آشپزخانه</span></a>-->
-                        <!--<div class="dropdown-menu w-100 border-0 py-0 m-0">-->
-                            <!--<div class="container-fluid dropdown-menu-color">-->
-                                <!--<div class="row w-100">-->
-                                    <!--<div class="col-12 col-md-4 col-lg-3">-->
-                                        <!--<div class="alert py-0 mb-0">-->
-                                            <!--<span class="dropdown-title">آرایش ناخن</span>-->
-                                        <!--</div>-->
-                                        <!--<ul class="list-group">-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">ناخن-->
-                                                <!--گیر و گوشه گیر</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">لاک-->
-                                                <!--پاک کن</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#"-->
-                                                                                                        <!--class="list-group-menu-font">لاک</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"-->
-                                                <!--id="list-goup-item-hover"><a href="#" class="list-group-menu-font">سوهان-->
-                                                <!--ناخن</a></li>-->
-                                            <!--<div class="dropdown-divider"></div>-->
-                                            <!--<div class="alert py-0 mb-0">-->
-                                                <!--<span class="dropdown-title">آرایش ناخن</span>-->
-                                            <!--</div>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">رژلب-->
-                                                <!--مایع</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">رژلب-->
-                                                <!--جامد</a></li>-->
-                                        <!--</ul>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-12 col-md-4 col-lg-3">-->
-                                        <!--<div class="alert py-0 mb-0">-->
-                                            <!--<span class="dropdown-title">آرایش چشم</span>-->
-                                        <!--</div>-->
-                                        <!--<ul class="list-group">-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">فر-->
-                                                <!--موژه</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">ریمل</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">مداد-->
-                                                <!--چشم</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">خط-->
-                                                <!--چشم</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">کانسیلر</a>-->
-                                            <!--</li>-->
-                                            <!--<div class="dropdown-divider"></div>-->
-                                            <!--<div class="alert py-0 mb-0">-->
-                                                <!--<span class="dropdown-title">آرایش مو</span>-->
-                                            <!--</div>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">اکسیدان</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">رنگ-->
-                                                <!--مو</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">اسپری-->
-                                                <!--مو</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">ژل-->
-                                                <!--مو</a></li>-->
-                                        <!--</ul>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-12 col-md-4 col-lg-3">-->
-                                        <!--<div class="alert  py-0 mb-0">-->
-                                            <!--<span class="dropdown-title">آرایش صورت</span>-->
-                                        <!--</div>-->
-                                        <!--<ul class="list-group">-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">پد-->
-                                                <!--آرایشی</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">ضدآفتاب</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">کرم-->
-                                                <!--پودر</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#"-->
-                                                                                                        <!--class="list-group-menu-font">پنکیک</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">رژگونه</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">پرایمر</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">مدادابرو</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">آکوا</a></li>-->
-                                        <!--</ul>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-12 col-md-4 col-lg-3">-->
-                                        <!--<img src="../assets/images/home-0.jpg" class="img-fluid d-none d-lg-block" style="height: 375px" alt="">-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</li>-->
-                    <!--<li class="nav-item">-->
-                        <!--<a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">-->
-                            <!--<span class="header-font mr-2 ml-2 mt-2">کالای دیجیتال</span></a>-->
-                        <!--<div class="dropdown-menu w-100 border-0 py-0 m-0">-->
-                            <!--<div class="container-fluid dropdown-menu-color">-->
-                                <!--<div class="row w-100">-->
-                                    <!--<div class="col-12 col-md-4 col-lg-3">-->
-                                        <!--<div class="alert py-0 mb-0">-->
-                                            <!--<a href="#"><span class="dropdown-title">لوازم جانبی گوشی </span></a>-->
-                                        <!--</div>-->
-                                        <!--<ul class="list-group">-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">کیف و-->
-                                                <!--کاور گوشی</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">پاوربانک</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">پایه-->
-                                                <!--نگهدارنده گوشی</a></li>-->
-                                            <!--<div class="dropdown-divider"></div>-->
-                                            <!--<div class="alert py-0 mb-0">-->
-                                                <!--<span class="dropdown-title">گوشی موبایل </span>-->
-                                            <!--</div>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">سامسونگ</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">هوآوی</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">اپل</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">هانر</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">شیایومی</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">نوکیا</a></li>-->
-                                        <!--</ul>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-12 col-md-4 col-lg-3">-->
-                                        <!--<div class="alert py-0 mb-0">-->
-                                            <!--<span class="dropdown-title"> لوازم جانبی</span>-->
-                                        <!--</div>-->
-                                        <!--<ul class="list-group">-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">مچ-->
-                                                <!--بندو ساعت هوشمند</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">هدفون،هندزفری</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">اسپیکر</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">هارد-->
-                                                <!--و فلش</a></li>-->
-                                        <!--</ul>-->
-                                        <!--<div class="dropdown-divider"></div>-->
-                                        <!--<div class="alert  py-0 mb-0">-->
-                                            <!--<span class="dropdown-title">لوازم جانبی دوربین</span>-->
-                                        <!--</div>-->
-                                        <!--<ul class="list-group">-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">لنز</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">کارت-->
-                                                <!--حافظه</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#"-->
-                                                                                                        <!--class="list-group-menu-font">کیف</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">کاغذ-->
-                                                <!--چاپ عکس</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">دوربین-->
-                                                <!--دو چشمی و شکاری</a></li>-->
-                                        <!--</ul>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-12 col-md-4 col-lg-3">-->
-                                        <!--<div class="alert py-0 mb-0">-->
-                                            <!--<span class="dropdown-title">کامپیوتر و تجهیزات جانبی</span>-->
-                                        <!--</div>-->
-                                        <!--<ul class="list-group">-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">تجهیزات-->
-                                                <!--مخصوص بازی</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">مانیتور</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">کیس-->
-                                                <!--های اسمبل شده</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">قطعات-->
-                                                <!--داخلی کامپیوتر</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#"-->
-                                                                                                        <!--class="list-group-menu-font">ماوس</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">کیبورد</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">لپ-->
-                                                <!--تاپ</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">کیف،کوله،کاور</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">کابل-->
-                                                <!--صدا</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">تبلت</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">شارژر-->
-                                                <!--تبلت و موبایل</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">دوربین-->
-                                                <!--های تحت شبکه</a></li>-->
-                                        <!--</ul>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-12 col-md-4 col-lg-3 d-none d-lg-block">-->
-                                        <!--<img src="../assets/images/digital-0.jpg" class="img-fluid d-none d-lg-block" style="height: 420px" alt="digital devices">-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</li>-->
-                    <!--<li class="nav-item ">-->
-                        <!--<a href="" class="nav-link dropdown-toggle" data-toggle="dropdown"><span-->
-                                <!--class="header-font mr-2 ml-2 mt-2">مدو پوشاک</span></a>-->
-                        <!--<div class="dropdown-menu w-100 border-0 py-0 m-0">-->
-                            <!--<div class="container-fluid dropdown-menu-color">-->
-                                <!--<div class="row w-100">-->
-                                    <!--<div class="col-12 col-lg-3">-->
-                                        <!--<div class="alert py-0 mb-0">-->
-                                            <!--<span class="dropdown-title">پوشاک زنانه</span>-->
-                                        <!--</div>-->
-                                        <!--<ul class="list-group">-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#"-->
-                                                                                                        <!--class="list-group-menu-font">مانتو</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#"-->
-                                                                                                        <!--class="list-group-menu-font">پالتو</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#"-->
-                                                                                                        <!--class="list-group-menu-font">هودی</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#"-->
-                                                                                                        <!--class="list-group-menu-font">دامن</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">پیراهن</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">لباس-->
-                                                <!--راحتی</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#"-->
-                                                                                                        <!--class="list-group-menu-font">کیف</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#"-->
-                                                                                                        <!--class="list-group-menu-font">کفش</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">اکسسوری</a>-->
-                                            <!--</li>-->
-                                        <!--</ul>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-12 col-lg-3">-->
-                                        <!--<div class="alert py-0 mb-0">-->
-                                            <!--<span class="dropdown-title">پوشاک مردانه</span>-->
-                                        <!--</div>-->
-                                        <!--<ul class="list-group">-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">کت و-->
-                                                <!--شلوار</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">لباس-->
-                                                <!--راحتی</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">کفش و-->
-                                                <!--کتونی</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">کمربند</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#"-->
-                                                                                                        <!--class="list-group-menu-font">جوراب</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">اکسسوری-->
-                                                <!--مردانه</a></li>-->
-                                        <!--</ul>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-12 col-lg-3">-->
-                                        <!--<div class="alert  py-0 mb-0">-->
-                                            <!--<span class="dropdown-title">پوشاک دخترانه</span>-->
-                                        <!--</div>-->
-                                        <!--<ul class="list-group">-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">لباس-->
-                                                <!--راحتی</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#"-->
-                                                                                                        <!--class="list-group-menu-font">دامن</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#"-->
-                                                                                                        <!--class="list-group-menu-font">شلوار</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#"-->
-                                                                                                        <!--class="list-group-menu-font">کلاه</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#"-->
-                                                                                                        <!--class="list-group-menu-font">عینک</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">لباس-->
-                                                <!--عروسکی</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">لباس-->
-                                                <!--اسپرت</a></li>-->
-                                        <!--</ul>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-12 col-md-4 col-lg-3">-->
-                                        <!--<img src="../assets/images/dress-3.jpg" class="img-fluid d-none d-lg-block" style="height: 323px" alt="">-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</li>-->
-                    <!--<li class="nav-item ">-->
-                        <!--<a href="" class="nav-link dropdown-toggle" data-toggle="dropdown"><span-->
-                                <!--class="header-font mr-2 ml-2 mt-2">کتاب و مجله</span></a>-->
-                        <!--<div class="dropdown-menu w-100 border-0 py-0 m-0">-->
-                            <!--<div class="container-fluid dropdown-menu-color">-->
-                                <!--<div class="row w-100">-->
-                                    <!--<div class="col-12 col-lg-3 w-100">-->
-                                        <!--<div class="alert py-0 mb-0">-->
-                                            <!--<span class="dropdown-title">مجلات داخلی و خارجی</span>-->
-                                        <!--</div>-->
-                                        <!--<div class="dropdown-divider"></div>-->
-                                        <!--<ul class="list-group">-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">کتابهای-->
-                                                <!--رایگان</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">کتابهای-->
-                                                <!--صوتی</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">پادکست</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">داستان-->
-                                                <!--و رمان</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">روانشناسی</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">کتابهای-->
-                                                <!--مدواستایل</a></li>-->
-                                            <!--<li class="list-group-item border-0 py-0 bg-transparent"><a href="#" class="list-group-menu-font">کتاب-->
-                                                <!--آشپزی</a></li>-->
-                                        <!--</ul>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-12 col-md-4 col-lg-3"></div>-->
-                                    <!--<div class="col-12 col-md-4 col-lg-3"></div>-->
-                                    <!--<div class="col-12 col-md-4 col-lg-3">-->
-                                        <!--<img src="../assets/images/book-1.jpg" class="img-fluid d-none d-lg-block" style="height: 275px" alt="">-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</li>-->
-                    <!--<li class="nav-item ">-->
-                        <!--<a href="" class="nav-link dropdown-toggle" data-toggle="dropdown"><span-->
-                                <!--class="header-font mr-2 ml-2 mt-2">گلخانه</span></a>-->
-                    <!--</li>-->
-                    <!--<li class="nav-item ">-->
-                        <!--<button type="button" class="btn bg-transparent mt-2 track-order-font" data-toggle="modal" data-target="#mymodal">پیگیری سفارش</button>-->
-                        <!--<div class="modal fade" id="mymodal">-->
-                            <!--<div class="modal-dialog  ">-->
-                                <!--<div class="modal-content">-->
-                                    <!--<div class="modal-header bg-info text-light py-2">-->
-                                       <!--<span class="modal-title d-flex"><i class="material-icons">local_shipping</i>-->
-                                       <!--<h6 class="modal-title mr-2">فرم پیگیری سفارش</h6>-->
-                                       <!--</span>-->
-                                        <!--<button type="button" class="close text-white" data-dismiss="modal"><span>&times;</span></button>-->
-                                    <!--</div>-->
-                                    <!--<div class="modal-body text-secondary">-->
-                                        <!--<p class="track-order-font text-secondary">برای پیگیری سفارش، لطفا شماره سفارش و آدرس ایمیل خود را در کادرهای زیر وارد کرده و دکمه پیگیری را فشار دهید. شماره سفارش از طریق رسید و ایمیلی که به شما ارسال شده در اختیارتان قرار گرفته است.</p>-->
-                                        <!--<form action="" method="post">-->
-                                            <!--<div class="form-group">-->
-                                                <!--<label for="order-id" class="modal-label-font">شناسه سفارش (ID)</label>-->
-                                                <!--<div class="input-group">-->
-                                                    <!--<input type="text" class="form-control track-order-font p-3" id="order-id" placeholder="شماره سفارش در ایمیل ارسال شده به شما موجود است.">-->
-                                                    <!--<div class="input-group-prepend">-->
-                                                        <!--<span class="input-group-text p-1"><i class="material-icons">assignment</i></span>-->
-                                                    <!--</div>-->
-                                                <!--</div>-->
-                                            <!--</div>-->
-                                            <!--<div class="form-group">-->
-                                                <!--<label for="order-email" class="modal-label-font">ایمیل صورتحساب</label>-->
-                                                <!--<div class="input-group">-->
-                                                    <!--<input type="email" class="form-control track-order-font p-3 text-right" id="order-email" placeholder="ایمیلی که در هنگام ثبت سفارش وارد کردید">-->
-                                                    <!--<div class="input-group-prepend">-->
-                                                        <!--<span class="input-group-text p-1"><i class="material-icons">email</i></span>-->
-                                                    <!--</div>-->
-                                                <!--</div>-->
-                                            <!--</div>-->
-                                            <!--<button type="button" class="btn btn-info float-left">پیگیری</button>-->
-                                        <!--</form>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</li>-->
-                <!--</ul>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</nav>-->
-<!-- end of header -->
-
+<nav class="navbar navbar-expand-lg py-0 navbar-color">
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#main-nav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-nav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="product.html" class="nav-link nav-item-font">سوپر مارکت</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link dropdown-toggle nav-item-font" data-toggle="dropdown">زیبایی و سلامت</a>
+                <div class="dropdown-menu border-0 w-100 m-0">
+                    <div class="container-fluid">
+                        <div class="row w-100">
+                            <div class="col-12 col-md-3">
+                                <div class="alert m-0 border-0 py-0 px-2">
+                                    <i class="material-icons">keyboard_arrow_left</i>
+                                    <a href="#" class="sub-dropdown-title font-weight-bold">آرایش ناخن</a>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">ناخن گیر و گوشه گیر</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">لاک</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">لاک پاک کن</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">سوهان ناخن</a>
+                                    </li>
+                                    <div class="alert m-0 border-0 py-0 px-2">
+                                        <i class="material-icons">keyboard_arrow_left</i>
+                                        <a href="#" class="sub-dropdown-title font-weight-bold">آرایش لب</a>
+                                    </div>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">رژلب مایع</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">رژلب جامد</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">بالم لب</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="alert m-0 border-0 py-0 px-2">
+                                    <i class="material-icons">keyboard_arrow_left</i>
+                                    <a href="#" class="sub-dropdown-title font-weight-bold">آرایش چشم</a>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">فرموژه</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">ریمل</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">مداد چشم</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">خط چشم</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کانسیلر</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
 
 </body>
 </html>
