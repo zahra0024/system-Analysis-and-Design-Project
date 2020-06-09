@@ -198,96 +198,52 @@ input:focus{
 /* end of top header */
 
 /* styles of header */
-#header-container{
+.navbar-color{
     background:#dfe6e9;
-    height: 40px;
 }
-#topbar-left .top-line{
-    color: #777;
-    width: 1px;
-}
-.header-font{
+nav ul li .nav-item-font{
     font-size: 12px;
+    color: #101a27;
 }
-#navbar{
-    background: #f5f5f5;
-    padding: 0;
-    transition: all .4s;
+nav ul li .dropdown-menu{
+    background:#dfe6e9;
 }
-.navbar-toggler{
-    border: 0;
+nav ul li .dropdown-menu ul li{
+    background:#dfe6e9;
 }
-.list-group-item{
-    z-index: 10;
+nav ul li .dropdown-menu .sub-dropdown-title{
+    font-size: 11px;
+    color: #38a7bb;
 }
-.navbar-nav .nav-item{
-z-index: 10;
+nav ul li .dropdown-menu .sub-dropdown-menu{
+    font-size: 10px;
+    font-weight: bold;
 }
-.navbar-toggler:focus{
-    outline: none;
+nav ul li .dropdown-menu li{
+    line-height: 18px;
 }
-.navbar-dark .navbar-nav .nav-link{
-    color:  #38a7bb;
+nav ul li .dropdown-menu i{
+    font-size: 12px;
+    font-weight: bold;
+    vertical-align: -4px;
+    color: #38a7bb;
 }
-.navbar-dark .navbar-nav .nav-link:hover{
-    color:  #38a7bb;
-}
-.navbar-dark .navbar-nav .nav-link:focus{
-    color:  #38a7bb;
-}
-.navbar-nav .nav-item:hover .dropdown-menu{
-    display: block;
-}
+/*.navbar-nav .nav-item:hover .dropdown-menu{*/
+/*    display: block;*/
+/*}*/
 .dropdown-toggle::after{
-    content: none;
-}
-.dropdown-title{
-    color: #29a7d5!important;
-    font-size: 12px;
+    /*content: none;*/
+    color:#777;
+    vertical-align: 0;
 }
 nav ul li{
     line-height: 2;
     padding: 0 2px;
 }
-nav ul li a span{
-    color: #000;
-}
-.list-group-menu-font{
-    font-size: 12px;
-    color: #000;
-}
-.dropdown-divider{
-    border-bottom: 1px solid #ddd !important;
-}
-.dropdown-menu img{
-    position: absolute;
-    bottom: 0;
-    left: -30px;
-}
 .list-group-item a:hover{
     color: #d42148!important;
 }
-.dropdown-menu-color{
-    /*background: #f1f2f6;*/
-    background: red;
-    border-bottom: 2px solid #38a7bb;
-    border-top: 2px solid #eee;
-}
-.nav-link .arrow-icon{
-    font-size: 8px!important;
-    color: #9da3a9!important;
-    margin-bottom: 10px!important;
-}
-.track-order-font{
-    font-size: 12px;
-}
-.track-order-font:focus{
-    box-shadow: none;
-}
-.modal-label-font{
-    font-size: 13px;
-    font-weight: bold;
-}
+
 /* end of header */
 
 /* start of first-slider*/
