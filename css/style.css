@@ -38,6 +38,12 @@ body{
     padding: 0;
     background: #eee;
 }
+.bg{
+    background: #bdc3c7;
+}
+.bg_1{
+    background:#dfe6e9;
+}
 a{
     text-decoration: none!important;
 }
@@ -58,6 +64,8 @@ input:focus{
 #top-header-container{
     background: #101a27;
     height: 50px;
+    width: 98%;
+    margin: 0 auto;
 }
 #logo{
     margin-right: 27px;
@@ -200,6 +208,8 @@ input:focus{
 /* styles of header */
 .navbar-color{
     background:#dfe6e9;
+    width: 98%;
+    margin: 0 auto;
 }
 nav ul li .nav-item-font{
     font-size: 12px;
@@ -577,8 +587,10 @@ nav ul li{
     color: #636e72;
 }
 .title .text{
-    font-size: 15px;
+    font-size: 14px;
     cursor: pointer;
+    color: #195a8e;
+    font-weight: bold;
 }
 .accordion.active .title{
     border-bottom: 1px solid #c8d6e5;
@@ -618,8 +630,8 @@ nav ul li{
     transition: all .5s;
 }
 .accordion-font{
-    font-size: 13px;
-    color: #000;
+    font-size: 12px;
+    color: #195a8e;
 }
 .accordion.active .content{
     opacity: 0;
@@ -1218,4 +1230,29 @@ nav ol{
     font-size: 11px;
     vertical-align: -2px;
     color: #195a8e;
+}
+/* styles of rent page */
+.advertise-box{
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+.advertise-box p{
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+.book-title{
+    font-size: 14px;
+    color: #195a8e;
+}
+.book-info{
+    font-size: 12px;
+    color: #195a8e;
+}
+.book-info .add-book{
+    font-size: 12px;
+}
+.pages-number:hover{
+   background: #fff;
 }

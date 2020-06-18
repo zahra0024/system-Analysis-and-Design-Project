@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>اجاره کتاب</title>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="../assets/css/bootstrap-rtl.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap-reboot-rtl.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/icon.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.theme.default.css">
+    <link rel="stylesheet" href="../assets/css/jquery.simpleTicker.css">
+    <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- bootstrap js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/owl.carousel.min.js"></script>
+    <script src="../assets/js/jquery.simpleTicker.js"></script>
+    <script src="../assets/js/custom.js"></script>
+</head>
+<body>
+<!-- top header -->
+<div class="container-fluid" id="top-header-container">
+    <div class="row">
+         <div id="logo">
+             <h3 class="mt-2">LSHOP</h3>
+         </div>
+         <div class="col-1 col-md-4"></div>
+         <div id="topbar-left">
+             <div class="sabade-kharid float-left">
+                 <a href="shopping-cart.html"><i class="fa fa-shopping-cart mr-3 mt-2"><span
+                         class="font mr-2">سبد خرید</span></i></a>
+             </div>
+             <span class="mr-1 mt-2 float-left text-secondary">|</span>
+             <div class="user-login">
+                 <a href="login.html"><i class="fa fa-user float-left mt-2"><span class="font mr-2">ثبت نام | ورود</span></i></a>
+             </div>
+             <span class="ml-3 mt-2 float-left text-secondary">|</span>
+             <div class="search-icon float-left"></div>
+         </div>
+    </div>
+</div>
+<!-- start of search-wrapper -->
+<div class="search-wrapper">
+    <form action="">
+        <input type="text" placeholder="کلید واژه مورد نظر خود را وارد کنید...">
+    </form>
+</div>
+<!-- end of search-wrapper -->
+
+<!-- start of top header -->
+<nav class="navbar navbar-expand-md py-0 navbar-color">
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#main-nav">
+        <span class="navbar-toggler-icon">
+            <i class="material-icons" style="vertical-align: -12px">dehaze</i>
+        </span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-nav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link nav-item-font">صفحه اصلی</a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link nav-item-font">راهنمای استفاده از سایت</a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link nav-item-font">بازگشت کتاب</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link nav-item-font">پیگیری سفارش</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- end of header -->
+
+<!-- start of slider -->
+<div class="container-fluid mt-2">
+    <div class="row">
+        <div class="col-12">
+            <div id="mycarousel-0" class="carousel slide carousel-fade" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#mycarousel-0" data-slide-to="0" active></li>
+                    <li data-target="#mycarousel-0" data-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="#"> <img src="../assets/images/rent-book/slider.jpg" class="w-100 d-block img-fluid" style="height: 300px" alt="slider"></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#"> <img src="../assets/images/rent-book/slider_1.jpg" class="w-100 d-block img-fluid" style="height: 300px" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of slider -->
+
+<!-- start of content -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 col-lg-3 mt-3  order-md-first">
+            <div class="right-banner bg-white">
+                <div class="accordions">
+                    <div class="header p-2 font-right-banner" >دسته بندی کتاب ها</div>
+                    <form action="" class="category-searh mb-3">
+                        <input type="text" class="mr-2 mt-3 font" placeholder="دنبال چه کتابی هستی...">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                    <div class="accordion">
+                        <div class="title d-flex">
+                            <div class="text pr-3 d-flex pt-2">لیست کتاب هاا</div>
+                            <div class="icon mr-auto pl-3 d-flex">&times</div>
+                        </div>
+                        <div class="content p-0">
+                            <ul class="pb-2 pr-0">
+                                <div class="scrollbar ml-3" id="scroll-category" >
+                                    <a href="#"><li class="accordion-font pt-1 pb-1 pr-4 " >کتابهای درسی رشته معماری</li></a>
+                                    <a href="#"><li class="accordion-font pt-1 pb-1 pr-4 " >کتابهای درسی رشته برق</li></a>
+                                    <a href="#"> <li class="accordion-font pt-1 pb- pr-4 " >کتابهای درسی رشته عمران</li></a>
+                                    <a href="#"><li class="accordion-font pt-1 pb-1 pr-4 " >کتابهای درسی رشته علوم کامپیوتر</li></a>
+                                    <a href="#"><li class="accordion-font pt-1 pb-1 pr-4 " >کتابهای درسی رشته مهندسی کامپیوتر </li></a>
+                                    <a href="#"><li class="accordion-font pt-1 pb-1 pr-4 " >کتابهای درسی رشته هنر</li></a>
+                                    <a href="#"><li class="accordion-font pt-1 pb-1 pr-4 " >کتابهای درسی رشته پزشکی</li></a>
+                                    <a href="#"><li class="accordion-font pt-1 pb-1 pr-4 " >کتابهای درسی رشته ادبیات</li></a>
+                                    <a href="#"><li class="accordion-font pt-1 pb-1 pr-4 " > کتابهای تجارت</li></a>
+                                    <a href="#"><li class="accordion-font pt-1 pb-1 pr-4 " >کتاب های روانشناسی</li></a>
+                                    <a href="#"><li class="accordion-font pt-1 pb-1 pr-4 " >کتاب های تاریخ</li></a>
+                                </div>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion">
+                        <div class="title d-flex">
+                            <div class="text pr-3 d-flex pt-2">محدوده قیمت</div>
+                            <div class="icon mr-auto pl-3 d-flex">&times</div>
+                        </div>
+                        <div class="content p-3">
+                            <span class="font">100,000تومان</span>
+                            <span class="font float-left mt-2">5000تومان</span>
+                            <input type="range" class="custom-range" name="" value="0" min="0" max="100">
+                        </div>
+                    </div>
+                </div>
+                <!-- ios switch -->
+                <div class="ios-switch active p-1">
+                    <div class="switch-body">
+                        <div class="toggle"></div>
+                    </div>
+                    <input type="checkbox" name="toggle">
+                    <label for="" class="mb-0">فقط کتاب های موجود</label>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 col-lg-9 mt-3">
+            <div class="book-list bg-white">
+                <div class="book-info">
+                    <div class="row p-3">
+                        <div class="col-4 col-md-3">
+                            <img src="../assets/images/rent-book/book_1.jpg" alt="">
+                        </div>
+                        <div class="col-8 col-md-9">
+                            <p class="font-weight-bold book-title">Architectural Digest at 100: A Century of Style</p>
+                            <p class="mb-2">سال نشر : 2019</p>
+                            <p class="mb-2">نویسنده : Architectural Digest at 100: A Century of Style</p>
+                            <p >شابک : 9781419733338</p>
+                            <a href="#" class=" btn btn-info add-book text-white">افزودن به سبد</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="book-list bg_1">
+                <div class="book-info">
+                    <div class="row p-3">
+                        <div class="col-4 col-md-3">
+                            <img src="../assets/images/rent-book/book_1.jpg" alt="">
+                        </div>
+                        <div class="col-8 col-md-9">
+                            <p class="font-weight-bold book-title">Architectural Digest at 100: A Century of Style</p>
+                            <p class="mb-2">سال نشر : 2019</p>
+                            <p class="mb-2">نویسنده : Architectural Digest at 100: A Century of Style</p>
+                            <p >شابک : 9781419733338</p>
+                            <a href="#" class=" btn btn-info add-book text-white">افزودن به سبد</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="book-list bg-white">
+                <div class="book-info">
+                    <div class="row p-3">
+                        <div class="col-4 col-md-3">
+                            <img src="../assets/images/rent-book/book_1.jpg" alt="">
+                        </div>
+                        <div class="col-8 col-md-9">
+                            <p class="font-weight-bold book-title">Architectural Digest at 100: A Century of Style</p>
+                            <p class="mb-2">سال نشر : 2019</p>
+                            <p class="mb-2">نویسنده : Architectural Digest at 100: A Century of Style</p>
+                            <p >شابک : 9781419733338</p>
+                            <a href="#" class=" btn btn-info add-book text-white">افزودن به سبد</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="book-list bg_1">
+                <div class="book-info">
+                    <div class="row p-3">
+                        <div class="col-4 col-md-3">
+                            <img src="../assets/images/rent-book/book_1.jpg" alt="">
+                        </div>
+                        <div class="col-8 col-md-9">
+                            <p class="font-weight-bold book-title">Architectural Digest at 100: A Century of Style</p>
+                            <p class="mb-2">سال نشر : 2019</p>
+                            <p class="mb-2">نویسنده : Architectural Digest at 100: A Century of Style</p>
+                            <p >شابک : 9781419733338</p>
+                            <a href="#" class=" btn btn-info add-book text-white">افزودن به سبد</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="book-list bg-white">
+                <div class="book-info">
+                    <div class="row p-3">
+                        <div class="col-4 col-md-3">
+                            <img src="../assets/images/rent-book/book_1.jpg" alt="">
+                        </div>
+                        <div class="col-8 col-md-9">
+                            <p class="font-weight-bold book-title">Architectural Digest at 100: A Century of Style</p>
+                            <p class="mb-2">سال نشر : 2019</p>
+                            <p class="mb-2">نویسنده : Architectural Digest at 100: A Century of Style</p>
+                            <p >شابک : 9781419733338</p>
+                            <a href="#" class=" btn btn-info add-book text-white">افزودن به سبد</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="book-list bg_1">
+                <div class="book-info">
+                    <div class="row p-3">
+                        <div class="col-4 col-md-3">
+                            <img src="../assets/images/rent-book/book_1.jpg" alt="">
+                        </div>
+                        <div class="col-8 col-md-9">
+                            <p class="font-weight-bold book-title">Architectural Digest at 100: A Century of Style</p>
+                            <p class="mb-2">سال نشر : 2019</p>
+                            <p class="mb-2">نویسنده : Architectural Digest at 100: A Century of Style</p>
+                            <p >شابک : 9781419733338</p>
+                            <a href="#" class=" btn btn-info add-book text-white">افزودن به سبد</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-toolbar mt-3 justify-content-center ">
+                <div class="btn-group  bg-info">
+                    <button type="button" class="btn pages-number rounded-0">1</button>
+                    <button type="button" class="btn pages-number rounded-0">2</button>
+                    <button type="button" class="btn pages-number rounded-0">3</button>
+                    <button type="button" class="btn pages-number rounded-0">4</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of content -->
+
+<!-- start of footer -->
+<div class="container-fluid footer-container mt-3">
+    <div class="row">
+        <div class="col-6 col-md-3 mt-4">
+            <a href="#"><span class="text-white font-weight-bold text-info">راهنمای خرید از لایوشاپ</span></a>
+            <ul class="list-group border-0">
+                <a href="#">
+                    <li class="list-group-item border-0 rounded-0 pr-0 text-footer text-white">رویه ارسال سفارش</li>
+                </a>
+                <a href="#">
+                    <li class="list-group-item border-0 rounded-0 pr-0 text-footer text-white">نحوه ی ثبت سفارش</li>
+                </a>
+                <a href="#">
+                    <li class="list-group-item border-0 rounded-0 pr-0 text-footer text-white">شیوه های پرداخت</li>
+                </a>
+                <a href="#">
+                    <li class="list-group-item border-0 rounded-0 pr-0 text-footer text-white">مکاری با تامین کنندگان
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <div class="col-6 col-md-3 mt-4">
+            <a href="#"><span class="text-white font-weight-bold text-info">خدمات مشتریان</span></a>
+            <ul class="list-group border-0">
+                <a href="#">
+                    <li class="list-group-item border-0 rounded-0 pr-0 text-footer text-white">پاسخ به پرسش های متداول
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="list-group-item border-0 rounded-0 pr-0 text-footer text-white">رویه های بازگرداندن
+                        کالا
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="list-group-item border-0 rounded-0 pr-0 text-footer text-white">حریم خصوصی</li>
+                </a>
+                <a href="#">
+                    <li class="list-group-item border-0 rounded-0 pr-0 text-footer text-white">شرایط حمل و نقل</li>
+                </a>
+            </ul>
+        </div>
+        <div class="col-6 col-md-3 mt-4">
+            <a href="#"><span class="text-white font-weight-bold text-info">تماس با ما</span></a>
+            <ul class="list-group border-0">
+                <li class="list-group-item border-0 rounded-0 pr-0 text-footer text-white">تلفن تماس: 54595000 (021)
+                </li>
+                <li class="list-group-item border-0 rounded-0 pr-0 text-footer text-white">آدرس: خیابان ولیعصر، بالاتر
+                    از بهشتی، نبش بن بست پردیس، پلاک 2089، طبقه 4، واحد 4
+                </li>
+                <a href="#">
+                    <li class="list-group-item border-0 rounded-0 pr-0 text-footer text-white">ایمیل: info@okala.com
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <div class="col-6 col-md-3 mt-4">
+            <a href="#"><span class="text-white font-weight-bold text-info">از تخفیف ها و جدیدترین های لایو شاپ با خبر شوید.</span></a>
+            <div class="input-group mt-2 ">
+                <input type="text" class="form-control" placeholder="درس ایمیل" >
+                <div class="input-group-append" style="cursor: pointer">
+                    <div class="input-group-text">ارسال</i></div>
+                </div>
+            </div>
+            <div class="social-media-wrapper mt-4">
+                <div class="text">ما را در شبکه های اجتماعی دنبال کنید</div>
+                <a href="#"><i class="fa fa-twitter fa-fw"></i></a>
+                <a href="#"><i class="fa fa-facebook fa-fw"></i></a>
+                <a href="#"><i class="fa fa-instagram fa-fw"></i></a>
+                <a href="#"><i class="fa fa-google-plus fa-fw"></i></a>
+                <a href="#"><i class="fa fa-github fa-fw"></i></a>
+            </div>
+
+        </div>
+    </div>
+    <hr class="bg-info">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <p class="text-white font-weight-bold">فروشگاه اینترنتی لایوشاپ، بررسی، انتخاب و خرید آنلاین</p>
+            <p class="sub-footer-text">لایوشاپ به عنوان یکی از قدیمی‌ترین فروشگاه های اینترنتی با بیش از یک دهه تجربه،
+                با پایبندی به سه اصل، پرداخت در محل، 7 روز ضمانت بازگشت کالا و تضمین اصل‌بودن کالا موفق شده تا همگام با
+                فروشگاه‌های معتبر جهان، به بزرگ‌ترین فروشگاه اینترنتی ایران تبدیل شود. به محض ورود به سایت لایوشاپ با
+                دنیایی از کالا رو به رو می‌شوید! هر آنچه که نیاز دارید و به ذهن شما خطور می‌کند در اینجا پیدا خواهید
+                کرد.</p>
+        </div>
+        <div class="col-12 col-md-6 d-flex mt-2 mb-2">
+            <div class="col-3 col-md-3 d-flex">
+                <img src="../assets/images/neshan.png" alt="" class="w-100 d-block img-fluid bg-footer rounded"
+                     style="height: 100px">
+            </div>
+            <div class="col-3 d-flex">
+                <img src="../assets/images/senfi.png" alt="" class="w-100 d-block img-fluid bg-footer rounded"
+                     style="height: 100px">
+            </div>
+            <div class="col-3 d-flex">
+                <img src="../assets/images/enamad.png" alt="" class="w-100 d-block img-fluid bg-footer rounded"
+                     style="height: 100px">
+            </div>
+            <div class="col-3 d-flex">
+                <img src="../assets/images/ecunion.png" alt="" class="w-100 d-block img-fluid bg-footer rounded"
+                     style="height: 100px">
+            </div>
+        </div>
+    </div>
+    <div class="row sub-footer-bg">
+        <div class="col-12">
+            <p class="text-center text-white font pt-3"> کلیه حقوق مادی و معنوی این سایت محفوظ و متعلق به شرکت توسعه
+                تجارت الکترونیک کوروش است. ۱۳۹۶ ©
+                توسعه توسط گلرنگ سیستم
+            </p>
+        </div>
+    </div>
+</div>
+<!-- end of footer -->
+</body>
+</html>
