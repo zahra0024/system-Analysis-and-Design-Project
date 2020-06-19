@@ -1077,7 +1077,7 @@ nav ol{
     font-size: 14px;
 }
 .category-product,.brand-product,.seller,.price-product,.garuntee,.product-id,.related-product{
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     color: #195a8e;
 }
@@ -1255,4 +1255,93 @@ nav ol{
 }
 .pages-number:hover{
    background: #fff;
+}
+/* styles of detail-rent-book */
+.main-content{
+    border: 1px solid #d7dae2;
+    border-radius: 3px;
+    width: 95%;
+    margin: 0 auto;
+}
+.rent-box-inner{
+    border: 1px solid #d7dae2;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 3px;
+}
+.date-picker-wrapper{
+    border: 1px solid #ced4da;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 3px;
+    display: flex;
+}
+.date-picker-wrapper .input{
+    display: contents;
+}
+.date-picker-wrapper .input input{
+    border: 0;
+    text-align: center;
+    width: 47%;
+}
+.date-picker-wrapper span{
+    width: 20px;
+    background:#dfe6e9;
+    height: 20px;
+    margin: auto 0;
+    text-align: center;
+    font-size: 12px;
+}
+.calculate-price button{
+    width: 95%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 12px;
+}
+.description{
+    width: 95%;
+    margin: 0 auto;
+    border: 1px solid #d7dae2;
+    border-radius: 3px;
+
+}
+.description ul li{
+    line-height: 2;
+    font-size: 12px;
+}
+.text-tab{
+    color: #195a8e;
+}
+.description .nav-tabs{
+    border-color:#38a7bb ;
+}
+.description .nav .nav-item .nav-link.active{
+    background: #38a7bb;
+    color: #fff;
+}
+.tab-pane i{
+    vertical-align: -4px;
+    font-size: 14px;
+    color: #777;
+}
+.related-book{
+    margin: 0 auto;
+    font-size: 14px;
+    border-bottom: 1px solid #195a8e;
+    width: 97%;
+    margin: 0 auto;
+    color: #195a8e;
+    font-weight: bold;
+}
+.related-book .owl-nav .owl-prev {
+    position: absolute;
+    right: 0;
+    bottom: 130px;
+}
+.related-book .owl-nav .owl-next{
+    position: absolute;
+    left: 0;
+    bottom: 130px;
 }
