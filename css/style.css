@@ -57,6 +57,14 @@ ul{
 *{
     box-sizing: border-box;
 }
+.font-title{
+    font-size: 14px;
+    color: #195a8e;
+}
+.font-content{
+    font-size: 12px;
+    color: #195a8e;
+}
 input:focus{
     outline: none;
 }
@@ -698,7 +706,6 @@ nav ul li{
     color: #38a7bb;
 }
 .sale-timeout-content button a{
-    font-size: 20px;
     display: flex;
     justify-content: center;
     color: #fff;
@@ -1344,4 +1351,9 @@ nav ol{
     position: absolute;
     left: 0;
     bottom: 130px;
+}
+.sale-timeout-content button{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
