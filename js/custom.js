@@ -3,7 +3,7 @@ $(document).ready(function () {
         $('.search-icon').toggleClass('active');
         $('.search-wrapper').toggleClass('active');
     });
-    $('.field-wrapper input').keyup(function () {
+    $('.input-group input').keyup(function () {
         if($(this).val().length > 0){
             $(this).parent().addClass('active');
         }else{

@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tamrin</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap-rtl.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap-reboot-rtl.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/icon.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.theme.default.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
+    <!-- bootstrap js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/owl.carousel.min.js"></script>
+    <style>
+        .login{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            vertical-align: 100vh;
+        }
+        .wrapper{
+            border: 1px solid #ddd;
+        }
+        form h4{
+            background: #3d7588;
+            padding: 15px 0;
+            text-align: center;
+            color: #fff;
+            margin: 0 -15px;
+        }
+        .field-wrapper{
+            border: 1px solid rgba(0,0,0,0.2);
+            border-radius: 2px;
+            margin-top: 35px;
+        }
+        .field-wrapper .input-group label{
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            font-size: 13px;
+            transform: translateY(-50%);
+            pointer-events: none;
+            transition: all .4s;
+        }
+        .input-group.active label{
+            top: -18px;
+            right: 2px;
+            transition: all .4s;
+        }
+        .field-wrapper .input-group input{
+            background: transparent;
+            border: 0;
+            font-size: 13px;
+            box-sizing: border-box;
+        }
+        .field-wrapper .input-group input:focus{
+            box-shadow: none;
+        }
+        .field-wrapper .input-group .input-group-text{
+            background: transparent;
+            border: 0;
+        }
+        .law{
+            font-size: 13px;
+        }
+        .action{
+            background: #3d7584;
+            margin: 0 -15px;
+        }
+        .action a button{
+            color: #fff;
+        }
+        .action a button:focus{
+            box-shadow: none;
+        }
+        .action a button:hover{
+            color: #fff;
+        }
+        .reminded p{
+            text-align: center;
+            font-size: 13px;
+            margin: 10px 0;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <form action="" method="post">
+                <div class="form-group">
+                    <label for="test">Your Name :</label>
+                    <input type="text" class="form-control form-control-sm" placeholder="Please Enter Your Name..."
+                           id="test">
+                </div>
+                <div class="form-group">
+                    <label for="test2">Your Family</label>
+                    <input type="text" class="form-control form-control-sm" placeholder="Please Enter Your LastName..."
+                           id="test2">
+                </div>
+                <div class="form-group">
+                    <label for="test3">Your Email</label>
+                    <input type="email" class="form-control form-control-sm" placeholder="Please Enter Your Email..."
+                           id="test3">
+                </div>
+                <div class="form-group">
+                    <label for="test4">Your Password</label>
+                    <input type="password" class="form-control form-control-sm"
+                           placeholder="Please Enter Your Password..." id="test4">
+                </div>
+                <div class="form-group">
+                    <label for="test1">Select Your Product</label>
+                    <select name="" id="" class="form-control form-control-sm" multiple>
+                        <option value="">mobile</option>
+                        <option value="">tablet</option>
+                        <option value="">laptop</option>
+                        <option value="">mobile</option>
+                        <option value="">tablet</option>
+                        <option value="">laptop</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="test5">Your Idea</label>
+                    <textarea name="" id="test5" cols="30" rows="5" placeholder="Please Enter Your Idea..."
+                              class="form-control form-control-sm"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="test6">Choose Your File</label>
+                    <input type="file" class="form-control-file form-control-sm" id="test6">
+                </div>
+                <div class="form-group">
+                    <label for="test7">Select Your Range</label>
+                    <input type="range" class="form-control-range form-control-sm">
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="test8">
+                    <label for="test8" class="form-check-label">Remember Me</label>
+                </div>
+                <label for="">Your Sex :</label>
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" id="test9">
+                    <label for="test9" class="form-check-label">mail</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" id="test10">
+                    <label for="test10" class="form-check-label">femail</label>
+                </div>
+            </form>
+        </div>
+        <div class="col-4">
+            <form action="" method="post">
+                <div class="form-group">
+                    <label for="test0">نام</label>
+                    <input type="text" class="form-control form-control-sm" placeholder="نام خود را وارد کنید..."
+                           id="test0">
+                </div>
+                <div class="form-group">
+                    <label for="test1">نام خانوادگی</label>
+                    <input type="text" class="form-control form-control-sm"
+                           placeholder="نام خانوادگی خود را وارد کنید..." id="test1">
+                </div>
+                <div class="form-group">
+                    <label for="test-2">آدرس ایمیل</label>
+                    <input type="email" class="form-control form-control-sm" placeholder="ایمیل خود را وارد کنید..."
+                           id="test-2">
+                </div>
+                <div class="form-group">
+                    <label for="test-3">پسورد</label>
+                    <input type="password" class="form-control form-control-sm " placeholder="پسورد خود را وارد کنید..."
+                           id="test-3">
+                </div>
+                <div class="form-group">
+                    <label for="test-4">محصول مورد نظر خود را انتخاب کنید</label>
+                    <select name="" id="test-4" class="form-control form-control-sm">
+                        <option value="">موبایل</option>
+                        <option value="">تبلت</option>
+                        <option value="">لپ تاپ</option>
+                        <option value="">موبایل</option>
+                        <option value="">تبلت</option>
+                        <option value="">لپ تاپ</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="test-5">محصولات مورد نظر خود را وارد کنید</label>
+                    <select name="" id="test-5" class="form-control form-control-sm" multiple aria-invalid="test-5">
+                        <option value="">موبایل</option>
+                        <option value="">تبلت</option>
+                        <option value="">لپ تاپ</option>
+                        <option value="">موبایل</option>
+                        <option value="">تبلت</option>
+                        <option value="">لپ تاپ</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="test-6">دیدگاه خودرا وترد کنید</label>
+                    <textarea name="" id="test-6" cols="30" rows="5" placeholder="دیدگاه خود را وارد کنید..."
+                              class="form-control form-control-sm" aria-invalid="test-6"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="test-7">فایل مورد نظر خود را انتخاب کنید</label>
+                    <input type="file" class="form-control-file form-control-sm" id="test-7">
+                </div>
+                <div class="form-group">
+                    <label for="test-8">حدوده مورد نظر خود را انتخاب کنید</label>
+                    <input type="range" class="form-control-range form-control-sm" id="test-8">
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" class="form-check form-check-input" id="test-9">
+                    <label for="test-9" class="form-check-label">مرا به خاطر بسپار</label>
+                </div>
+                <label for="">جنسیت</label>
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check form-check-input" id="test-11">
+                    <label for="test-11">زن</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check form-check-input" id="test-10">
+                    <label for="test-10">مرد</label>
+                </div>
+            </form>
+        </div>
+        <div class="col-4">
+            <div class="input-group input-group-sm mt-2">
+                <div class="input-group-append ">
+                    <span class="input-group-text">@</span>
+                </div>
+                <input type="text" class="form-control">
+            </div>
+            <div class="input-group mt-2">
+                <div class="input-group-append">
+                    <span class="input-group-text">@</span>
+                </div>
+                <input type="text" class="form-control">
+            </div>
+            <div class="input-group input-group-lg mt-2">
+                <div class="input-group-append">
+                    <span class="input-group-text">@</span>
+                </div>
+                <input type="text" class="form-control">
+            </div>
+            <form action="" method="post">
+                <div class="input-group input-group-sm mt-2">
+                    <div class="input-group-append ">
+                        <div class="input-group-text">@</div>
+                    </div>
+                    <input type="text" class="form-control ">
+                </div>
+                <div class="input-group input-group-sm mt-2">
+                    <input type="text" class="form-control">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">.com</div>
+                    </div>
+                </div>
+                <div class="input-group input-group-sm mt-2">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <input type="checkbox">
+                        </div>
+                    </div>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="input-group input-group-sm mt-2">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <input type="radio">
+                        </div>
+                    </div>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="input-group input-group-sm mt-2">
+                    <div class="input-group-append">
+                        <span class="input-group-text">@</span>
+                    </div>
+                    <input type="text" class="form-control">
+                    <input type="text" class="form-control">
+                </div>
+                <div class="input-group input-group-sm mt-2">
+                    <div class="input-group-append">
+                        <span class="input-group-text">دیدگاه شما</span>
+                    </div>
+                    <textarea name="" id="" cols="30" rows="5" class="form-control"></textarea>
+                </div>
+                <div class="input-group input-group-sm mt-2">
+                    <div class="input-group-append">
+                        <span class="input-group-text">@</span>
+                        <span class="input-group-text">@</span>
+                    </div>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="input-group input-group-sm mt-2">
+                    <div class="input-group-append">
+                        <span class="input-group-text">محصول مورد نظر خود را انتخاب کنید</span>
+                    </div>
+                    <select name="" id="" class="custom-select" >
+                        <option value="">موبایل</option>
+                        <option value="">موبایل</option>
+                        <option value="">موبایل</option>
+                        <option value="">موبایل</option>
+                        <option value="">موبایل</option>
+                        <option value="">موبایل</option>
+                    </select>
+                </div>
+
+                <div class="input-group input-group-sm mt-2">
+                    <div class="input-group-append">
+                        <span class="input-group-text">محصول مورد نظر خود را انتخاب کنید</span>
+                    </div>
+                    <select name="" id="" class="custom-select" multiple >
+                        <option value="">موبایل</option>
+                        <option value="">موبایل</option>
+                        <option value="">موبایل</option>
+                        <option value="">موبایل</option>
+                        <option value="">موبایل</option>
+                        <option value="">موبایل</option>
+                    </select>
+                </div>
+                <div class="input-group input-group-sm mt-2">
+                    <div class="input-group-append">
+                        <span class="input-group-text">
+                            @
+                        </span>
+                    </div>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" placeholder="فایل مورد نظر خود را انتخاب کنید...">
+                        <label for="" class="custom-file-label"></label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- jumbotron -->
+<div class="jumbotron bg-secondary">
+    <h3>به وب سایت من خوش آمدید</h3>
+    <p>سون لرن مرجه تخصصی برنامه نویسی و آموزش وب</p>
+</div>
+<!-- login form -->
+<p class="text-center">=================================================================================================</p>
+<div class="container">
+    <div class="row login">
+        <div class="col-11 col-md-6 bg-light wrapper">
+            <form action="" method="post">
+                <h4>ثبت نام در سایت</h4>
+                <div class="field-wrapper">
+                    <div class="input-group">
+                        <label for="">آدرس ایمیل<span class="req text-secondary">*</span></label>
+                        <input type="email" class="form-control">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-envelope text-secondary"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="field-wrapper">
+                    <div class="input-group">
+                        <label for="">رمز عبور<span class="req text-secondary">*</span></label>
+                        <input type="password" class="form-control">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-lock text-secondary"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="field-wrapper">
+                    <div class="input-group">
+                        <label for="">تکرار رمز عبور<span class="req text-secondary">*</span></label>
+                        <input type="password" class="form-control">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-lock text-secondary"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="law d-flex">
+                    <input type="checkbox" class="form-check mt-4 ml-2">
+                    <p class="mt-4"><a href=""> حریم خصوصی</a>و<a href="">شرایط و قوانین</a>استفاده از سرویس های لایو شاپ را مطالعه نموده ام و با کلیه موارد آن موافقم.</p>
+                </div>
+                <div class="action mt-3">
+                    <a href="">
+                        <button class="btn  w-100 rounded-0">ثبت نام</button>
+                    </a>
+                </div>
+                <div class="reminded">
+                    <p>در صورتی که قبلا در لایو شاپ ثبت نام کرده اید لطفا<a href="">وارد شوید</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+$('.input-group input').keyup(function () {
+if($(this).val().length>0){
+    $(this).parent().addClass('active');
+}else{
+    $(this).parent().removeClass('active');
+}
+})
+    })
+</script>
+</body>
+</html>

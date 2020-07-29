@@ -16,9 +16,6 @@
     <script src="../assets/js/bootstrap.js"></script>
     <script src="../assets/js/custom.js"></script>
     <style>
-        /*:root{*/
-        /*    --duration:.5s;*/
-        /*}*/
         @font-face {
             font-family: 'sahel';
             src:url("../assets/font/Sahel.eot")format("eot");
@@ -36,120 +33,121 @@
             margin: 0;
             padding: 0;
         }
-        a{
-            text-decoration: none;
-        }
         .login{
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
         }
-        form h4{
-            background: #3d7584;
-            padding: 15px 0;
-            color: #fff;
-            margin: -2px -15px;
-        }
-        .step-wrapper{
+        .wrapper{
             border: 1px solid #ddd;
         }
+        form h5{
+            background: #3d7584;
+            color: #fff;
+            padding: 15px 0;
+            margin: 0 -15px;
+        }
         .field-wrapper{
-            border: 1px solid rgba(0,0,0,.2);
-            position: relative;
             margin-top: 35px;
-            transition: all .4s;
-            border-radius: 8px;
+            background: transparent;
+            border: 1px solid rgba(0,0,0,0.2);
         }
-        .field-wrapper .input-group-text{
-            border: 0;
-        }
-        .field-wrapper  label{
+        .field-wrapper label{
             position: absolute;
             top: 50%;
             right: 10px;
-            transform: translateY(-50%);
             font-size: 13px;
-            pointer-events: none;
-            transition: all .4s;
+            transform: translateY(-50%);
+            transition: all .5s;
         }
         .field-wrapper .input-group.active label{
             top: -18px;
-            right: 1px;
+            right: 2px;
             font-size: 12px;
+            transition: all .5s;
         }
-        form .field-wrapper .req{
-            color: #777;
+        .field-wrapper .input-group input{
+            background: transparent;
+            border: 0;
+            font-size: 13px;
+            box-sizing: border-box;
         }
-        form .field-wrapper input{
-            width: 100%;
+        .field-wrapper .input-group input:focus{
+            box-shadow: none;
+        }
+        .field-wrapper .input-group-text{
             background: transparent;
             border: 0;
         }
-        form .field-wrapper input:focus{
-            box-shadow: none;
-        }
-        .law{
+        .law p{
             font-size: 13px;
         }
         .action{
             margin: 0 -15px;
         }
-        .action .btn{
+        .action button{
             background: #3d7584;
             color: #fff;
         }
-        .action .btn:focus{
-            box-shadow: none;
+        .action button:hover{
+            color: #fff;
         }
-        .reminded{
+        .reminded p{
             font-size: 13px;
         }
-
     </style>
 </head>
 <body>
 <div class="container">
     <div class="row login">
-        <div class="col-11 col-md-6 step-wrapper bg-light" data-step="1">
+        <div class="col-11 col-md-6 wrapper bg-light">
             <form action="" method="post">
-                <h4 class="text-center">ثبت نام در سایت</h4>
+                <h5 class="text-center">ثبت نام در سایت</h5>
                 <div class="field-wrapper">
                     <div class="input-group">
-                        <label>آدرس ایمیل <span class="req">*</span></label>
-                        <input type="text" class="form-control">
-                        <div class="input-group-append">
-                            <span class="input-group-text bg-transparent"><i class="fa fa-envelope text-secondary"></i></span>
+                        <label for="email">آدرس ایمیل<span class="text-secondary">*</span></label>
+                        <input type="email" class="form-control" id="email" autocomplete="on" required>
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-envelope text-secondary"></i>
+                            </span>
                         </div>
                     </div>
                 </div>
                 <div class="field-wrapper">
                     <div class="input-group">
-                        <label>رمز عبور <span class="req">*</span></label>
-                        <input type="password" class="form-control">
-                        <div class="input-group-append">
-                            <span class="input-group-text bg-transparent"><i class="fa fa-lock text-secondary"></i></span>
+                        <label for="pass">رمز عبور<span class="text-secondary">*</span></label>
+                        <input type="password" class="form-control" id="pass" required>
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-lock text-secondary"></i>
+                            </span>
                         </div>
                     </div>
                 </div>
                 <div class="field-wrapper">
                     <div class="input-group">
-                        <label>تکرار رمز عبور <span class="req">*</span></label>
-                        <input type="password" class="form-control">
-                        <div class="input-group-append">
-                            <span class="input-group-text bg-transparent"><i class="fa fa-lock text-secondary"></i></span>
+                        <label for="rep-pass">تکرار رمز عبور<span class="text-secondary">*</span></label>
+                        <input type="password" class="form-control" id="rep-pass" required>
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-lock text-secondary"></i>
+                            </span>
                         </div>
                     </div>
                 </div>
                 <div class="law d-flex">
-                    <input type="checkbox" class="mt-3">
-                    <p class="mt-3 pr-1"><a href="provacy.html">حریم خصوصی </a> و<a href="provacy.html">شرایط و قوانین</a>  استفاده از سرویس های سایت لایوشاپ را مطالعه نموده و با کلیه موارد آن موافقم.</p>
+                    <input type="checkbox" class="form-check mt-4 ml-2">
+                    <p class="mt-4"><a href="provacy.html">حریم خصوصی </a>و<a href="provacy.html">شرایط و قوانین </a>استفاده از سرویس های لایو شاپ را مطالعه نموده ام و با کلیه موارد آن موافقم.</p>
                 </div>
                 <div class="action">
-                    <a href="" ><button class="btn w-100 mt-3 rounded-0"> ثبت نام</button></a>
+                    <a href="">
+                        <button class="btn w-100 rounded-0">ثبت نام</button>
+                    </a>
                 </div>
-                <div class="reminded text-center">
-                    <p class="m-0 p-2">اگر قبلا در لایو شاپ ثبت نام کرده اید<a href="login.html"> وارد شوید.</a></p>
+                <div class="reminded mt-2">
+                    <p class="text-center mb-2">اگر قبلا در لایو شاپ ثبت نام کرده اید لطفا <a href="login.html">وارد شوید.</a></p>
                 </div>
             </form>
         </div>
