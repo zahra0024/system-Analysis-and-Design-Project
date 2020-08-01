@@ -16,37 +16,37 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-<!-- top header -->
-<div class="container-fluid" id="top-header-container">
+<!-- start of top header -->
+<div class="container-fluid" id="top-header">
     <div class="row">
-        <div id="logo">
-            <h3 class="mt-2">LSHOP</h3>
+        <div class="col-2 col-md-6">
+            <div class="mr-2 mt-2" id="logo">
+                <a href="index.html"><h3>LSHOP</h3></a>
+            </div>
         </div>
-        <div class="col-1 col-md-4"></div>
-        <div id="topbar-left">
-            <div class="sabade-kharid float-left">
-                <a href="shopping-cart.html"><i class="fa fa-shopping-cart mr-3 mt-2"><span
-                        class="font mr-2">سبد خرید</span></i></a>
+        <div class="col-10 col-md-6">
+            <div class="d-flex justify-content-end mt-2" id="top-header-left">
+                <div class="search-icon"></div>
+                <span class="text-muted mt-1 font-weight-bolder">|</span>
+                <div id="shopping-cart">
+                    <a href="shopping-cart.html" class="text-light"><i class="fa fa-shopping-cart ml-1"></i>سبد خرید</a>
+                </div>
+                <span class="text-muted mt-1 font-weight-bolder"> |</span>
+                <div id="login-signup">
+                    <a href="login.html" class="text-light"><i class="fa fa-user text-light ml-1"></i>ورود </a>
+                    <span class="text-light"> |</span>
+                    <a href="signup.html" class="text-light">ثبت نام</a>
+                </div>
             </div>
-            <span class="mr-1 mt-2 float-left text-secondary">|</span>
-            <div class="user-login">
-                <a href="login.html"><i class="fa fa-user float-left mt-2"><span class="font mr-2">ثبت نام | ورود</span></i></a>
-            </div>
-            <span class="ml-3 mt-2 float-left text-secondary">|</span>
-            <div class="search-icon float-left"></div>
         </div>
     </div>
 </div>
-<!-- start of search-wrapper -->
+<!-- search wrapper -->
 <div class="search-wrapper">
-    <form action="">
-        <input type="text" placeholder="کلید واژه مورد نظر خود را وارد کنید...">
-    </form>
+    <input type="text" class="form-control rounded-0" placeholder="جستجو...">
 </div>
-<!-- end of search-wrapper -->
-<!-- end of top header -->
 
-<!-- start of header -->
+<!-- start of main menu -->
 <nav class="navbar navbar-expand-md py-0 navbar-color">
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#main-nav">
         <span class="navbar-toggler-icon">
@@ -56,11 +56,11 @@
     <div class="collapse navbar-collapse" id="main-nav">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a href="product.html" class="nav-link nav-item-font">سوپر مارکت</a>
+                <a href="category.html" class="nav-link nav-item-font">سوپر مارکت</a>
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link dropdown-toggle nav-item-font" data-toggle="dropdown">زیبایی و سلامت</a>
-                <div class="dropdown-menu border-0 w-100 m-0">
+                <div class="dropdown-menu w-100 m-0 custom-dropdown-menu">
                     <div class="container-fluid">
                         <div class="row w-100">
                             <div class="col-12 col-md-3">
@@ -172,7 +172,7 @@
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link dropdown-toggle nav-item-font" data-toggle="dropdown">خانه و آشپزخانه</a>
-                <div class="dropdown-menu border-0 m-0 w-100">
+                <div class="dropdown-menu m-0 w-100 custom-dropdown-menu">
                     <div class="container-fluid">
                         <div class="row w-100">
                             <div class="col-12 col-md-3">
@@ -284,7 +284,7 @@
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link dropdown-toggle nav-item-font" data-toggle="dropdown">کالای دیجیتال</a>
-                <div class="dropdown-menu border-0 m-0 w-100">
+                <div class="dropdown-menu m-0 w-100 custom-dropdown-menu">
                     <div class="container-fluid">
                         <div class="row w-100">
                             <div class="col-12 col-md-3">
@@ -402,7 +402,7 @@
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link dropdown-toggle nav-item-font" data-toggle="dropdown">مدوپوشاک</a>
-                <div class="dropdown-menu border-0 m-0 w-100">
+                <div class="dropdown-menu m-0 w-100 custom-dropdown-menu">
                     <div class="container-fluid">
                         <div class="row w-100">
                             <div class="col-12 col-md-3">
@@ -500,8 +500,8 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link dropdown-toggle nav-item-font" data-toggle="dropdown">کتاب و مجله</a>
-                <div class="dropdown-menu border-0 m-0 w-100">
+                <a href="book.html" class="nav-link dropdown-toggle nav-item-font" data-toggle="dropdown">کتاب و مجله</a>
+                <div class="dropdown-menu m-0 w-100 custom-dropdown-menu">
                     <div class="container-fluid">
                         <div class="row w-100">
                             <div class="col-12 col-md-3">
@@ -528,7 +528,6 @@
     </div>
 </nav>
 <!-- end of header -->
-
 <!-- start of slider -->
 <div class="container-fluid ">
     <div class="row">

@@ -21,85 +21,80 @@
     <script src="../assets/js/owl.carousel.min.js"></script>
     <style>
         @font-face {
-            font-family: 'sahel';
-            src:url("../assets/font/Sahel.eot")format("eot");
-            src: url("../assets/font/Sahel.woff")format("woff"),
-            url("../assets/font/Sahel.woff2")format("woff2"),
-            url("../assets/font/Sahel.ttf")format("truetype");
-            font-style: normal;
-            font-weight: normal;
-        }
-        body{
-            font-family: sahel;
-            background-image: url("../assets/images/pic.jpg");
-            background-position: cover;
-            background-repeat: no-repeat;
-            margin: 0;
-            padding: 0;
-        }
-        a{
-            text-decoration: none;
-        }
+                    font-family: 'sahel';
+                    src:url("../assets/font/Sahel.eot")format("eot");
+                    src: url("../assets/font/Sahel.woff")format("woff"),
+                    url("../assets/font/Sahel.woff2")format("woff2"),
+                    url("../assets/font/Sahel.ttf")format("truetype");
+                    font-style: normal;
+                    font-weight: normal;
+                }
+                body{
+                    font-family: sahel;
+                    background-image: url("../assets/images/pic.jpg");
+                    background-position: cover;
+                    background-repeat: no-repeat;
+                    margin: 0;
+                    padding: 0;
+                }
+                a{
+                                text-decoration: none;
+                            }
         .login{
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
         }
-         form h4{
-            padding: 15px;
-             background: #3d7584;
-             margin: -2px -15px;
-             color: #fff;
+        form h5{
+            background: #3d7584;
+            padding: 15px 0;
+            color: #fff;
+            margin: 0 -15px;
         }
-         .field-wrapper{
-             border: 1px solid rgba(0,0,0,.2);
-             position: relative;
-             margin-top: 30px;
-             transition: all .4s;
-             border-radius: 8px;
-         }
-        .field-wrapper .input-group-text{
-            border: 0;
+        .wrapper{
+            border: 1px solid #ddd;
         }
-        .field-wrapper  label{
+        .field-wrapper{
+            border: 1px solid rgba(0,0,0,0.2);
+            border-radius: 4px;
+            margin-top: 35px;
+        }
+        .field-wrapper .input-group label{
             position: absolute;
             top: 50%;
             right: 10px;
+            font-size: 13px;
             transform: translateY(-50%);
-             font-size: 13px;
-             pointer-events: none;
-            transition: all .4s;
-         }
+            transition: all .5s;
+        }
         .field-wrapper .input-group.active label{
             top: -18px;
-            right: 1px;
+            right: 2px;
             font-size: 12px;
+            transition: all .5s;
         }
-        form .field-wrapper .req{
-            color: #777;
+        .field-wrapper .input-group input{
+            background: transparent;
+            border: 0;
+            box-sizing: border-box;
+            font-size: 13px;
         }
-        form .field-wrapper input{
-            width: 100%;
+        .field-wrapper .input-group input:focus{
+            box-shadow: none;
+        }
+        .field-wrapper .input-group .input-group-text{
             background: transparent;
             border: 0;
         }
-        form .field-wrapper input:focus{
-            box-shadow: none;
-        }
-        .remember{
+        .remember p{
             font-size: 13px;
         }
         .action{
+            background: #3d7584;
             margin: 0 -15px;
         }
-        .action .btn{
-            background: #3d7584;
-        }
-        .action .btn:focus{
-            box-shadow: none;
-        }
-        .text{
+        .reminded p{
             font-size: 13px;
         }
     </style>
@@ -107,36 +102,43 @@
 <body>
 <div class="container">
     <div class="row login">
-        <div class="col-9 col-md-6 col-lg-5  bg-light">
+        <div class="col-11 col-md-6 wrapper bg-light">
             <form action="" method="post">
-              <h4 class="text-center"> ورود به سایت</h4>
+                <h5 class="text-center">ورود به سایت</h5>
                 <div class="field-wrapper">
                     <div class="input-group">
-                        <label>آدرس ایمیل <span class="req">*</span></label>
-                        <input type="text" class="form-control">
-                        <div class="input-group-append">
-                            <span class="input-group-text bg-transparent"><i class="fa fa-envelope text-secondary"></i></span>
+                        <label for="email">آدرس ایمیل<span class="text-secondary">*</span></label>
+                        <input type="email" class="form-control" autocomplete="on" required id="email">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="fa fa-envelope text-secondary"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="field-wrapper">
                     <div class="input-group">
-                        <label>رمز عبور <span class="req">*</span></label>
-                        <input type="password" class="form-control">
-                        <div class="input-group-append">
-                            <span class="input-group-text bg-transparent"><i class="fa fa-lock text-secondary"></i></span>
+                        <label for="pass">رمز عبور<span class="text-secondary">*</span></label>
+                        <input type="password" class="form-control" autocomplete="on" required id="pass">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="fa fa-lock text-secondary"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="remember mt-4">
-                    <input type="checkbox">
-                    <label>مرا به خاطر بسپار</label>
+                <div class="remember d-flex">
+                    <input type="checkbox" class="form-check mt-4 ml-2">
+                    <p class="mt-4">مرا به خاطر بسپار</p>
                 </div>
                 <div class="action">
-                    <a href=""><button class="btn w-100 mt-3 rounded-0 text-white">ورود</button></a>
+                    <a href="">
+                        <button class="btn w-100 rounded-0 text-white">ورود</button>
+                    </a>
                 </div>
-                <p class="text p-2 m-0 text-center">اگر کاربر جدید هستید <a href="signup.html"> ثبت نام</a> کنید</p>
-
+                <div class="reminded">
+                    <p class="my-2 text-center">اگر کاربر جدید هستید <a href="signup.html">وارد شوید.</a></p>
+                </div>
             </form>
         </div>
     </div>

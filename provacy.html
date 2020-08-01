@@ -24,7 +24,7 @@
 <style>
     .box-provacy {
         background: #fff;
-        box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+        box-shadow: 0 0 3px rgba(0, 0, 0, .2);
     }
 
     .box-provacy h5 {
@@ -35,41 +35,41 @@
     .box-provacy p {
         padding: 7px;
         line-height: 2;
-        font-size: 16px;
+        font-size: 14px;
     }
 </style>
 <body>
-<!-- top header -->
-<div class="container-fluid" id="top-header-container">
+<!-- start of top header -->
+<div class="container-fluid" id="top-header">
     <div class="row">
-        <div id="logo">
-            <h3 class="mt-2">LSHOP</h3>
+        <div class="col-2 col-md-6">
+            <div class="mr-2 mt-2" id="logo">
+                <a href="index.html"><h3>LSHOP</h3></a>
+            </div>
         </div>
-        <div class="col-1 col-md-4"></div>
-        <div id="topbar-left">
-            <div class="sabade-kharid float-left">
-                <a href="shopping-cart.html"><i class="fa fa-shopping-cart mr-3 mt-2"><span
-                        class="font mr-2">سبد خرید</span></i></a>
+        <div class="col-10 col-md-6">
+            <div class="d-flex justify-content-end mt-2" id="top-header-left">
+                <div class="search-icon"></div>
+                <span class="text-muted mt-1 font-weight-bolder">|</span>
+                <div id="shopping-cart">
+                    <a href="shopping-cart.html" class="text-light"><i class="fa fa-shopping-cart ml-1"></i>سبد خرید</a>
+                </div>
+                <span class="text-muted mt-1 font-weight-bolder"> |</span>
+                <div id="login-signup">
+                    <a href="login.html" class="text-light"><i class="fa fa-user text-light ml-1"></i>ورود </a>
+                    <span class="text-light"> |</span>
+                    <a href="signup.html" class="text-light">ثبت نام</a>
+                </div>
             </div>
-            <span class="mr-1 mt-2 float-left top-line">|</span>
-            <div class="user-login">
-                <a href="login.html"><i class="fa fa-user float-left mt-2"><span class="font mr-2">ثبت نام | ورود</span></i></a>
-            </div>
-            <span class="ml-3 mt-2 float-left top-line">|</span>
-            <div class="search-icon float-left"></div>
         </div>
     </div>
 </div>
-<!-- start of search-wrapper -->
+<!-- search wrapper -->
 <div class="search-wrapper">
-    <form action="">
-        <input type="text" placeholder="کلید واژه مورد نظر خود را وارد کنید...">
-    </form>
+    <input type="text" class="form-control rounded-0" placeholder="جستجو...">
 </div>
-<!-- end of search-wrapper -->
-<!-- end of top header -->
 
-<!-- start of header -->
+<!-- start of main menu -->
 <nav class="navbar navbar-expand-md py-0 navbar-color">
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#main-nav">
         <span class="navbar-toggler-icon">
@@ -83,7 +83,7 @@
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link dropdown-toggle nav-item-font" data-toggle="dropdown">زیبایی و سلامت</a>
-                <div class="dropdown-menu border-0 w-100 m-0">
+                <div class="dropdown-menu w-100 m-0 custom-dropdown-menu">
                     <div class="container-fluid">
                         <div class="row w-100">
                             <div class="col-12 col-md-3">
@@ -195,7 +195,7 @@
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link dropdown-toggle nav-item-font" data-toggle="dropdown">خانه و آشپزخانه</a>
-                <div class="dropdown-menu border-0 m-0 w-100">
+                <div class="dropdown-menu m-0 w-100 custom-dropdown-menu">
                     <div class="container-fluid">
                         <div class="row w-100">
                             <div class="col-12 col-md-3">
@@ -307,7 +307,7 @@
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link dropdown-toggle nav-item-font" data-toggle="dropdown">کالای دیجیتال</a>
-                <div class="dropdown-menu border-0 m-0 w-100">
+                <div class="dropdown-menu m-0 w-100 custom-dropdown-menu">
                     <div class="container-fluid">
                         <div class="row w-100">
                             <div class="col-12 col-md-3">
@@ -425,7 +425,7 @@
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link dropdown-toggle nav-item-font" data-toggle="dropdown">مدوپوشاک</a>
-                <div class="dropdown-menu border-0 m-0 w-100">
+                <div class="dropdown-menu m-0 w-100 custom-dropdown-menu">
                     <div class="container-fluid">
                         <div class="row w-100">
                             <div class="col-12 col-md-3">
@@ -524,7 +524,7 @@
             </li>
             <li class="nav-item">
                 <a href="book.html" class="nav-link dropdown-toggle nav-item-font" data-toggle="dropdown">کتاب و مجله</a>
-                <div class="dropdown-menu border-0 m-0 w-100">
+                <div class="dropdown-menu m-0 w-100 custom-dropdown-menu">
                     <div class="container-fluid">
                         <div class="row w-100">
                             <div class="col-12 col-md-3">
@@ -566,7 +566,7 @@
                     نام، نشانی، نشانی الکترونیک (ایمیل)، شماره تلفن و سایر اطلاعاتی که به صورت عادی در دسترس عموم مردم
                     نیست اشاره نمود. اطلاعات جمع آوری شده و نحوه استفاده از آن ها: شما با ثبت نام در فروشگاه اینترنتی
                     لایوشاپ مشخصات خود از قبیل نام و نام خانوادگی،شماره تماس، ایمیل و … را در اختیار فروشگاه اینترنتی
-                    اُکالا قرار می دهید. در ادامه فعالیت در فروشگاه اینترنتی لایوشاپ و تقاضا برای ثبت سفارش، شما نیاز به
+                    لایوشاپ قرار می دهید. در ادامه فعالیت در فروشگاه اینترنتی لایوشاپ و تقاضا برای ثبت سفارش، شما نیاز به
                     اضافه کردن مشخصات آدرس خود و تلفن های تماس خواهید داشت. شما پس از ورود به فروشگاه اینترنتی لایوشاپ ،
                     به عنوان کاربر فروشگاه اینترنتی لایوشاپ شناخته خواهید شد و کلیه اطلاعات مذکور و اطلاعاتی مانند
                     تراکنش ها، و اطلاعات فردی در اختیار فروشگاه اینترنتی لایوشاپ خواهد بود. لازم به ذکر است که این موارد
@@ -577,13 +577,13 @@
                     توانید کلیه اطلاعات شخصی خود را در بخش مربوط به حساب من تغییر داده و ویرایش کنید. این اطلاعات شامل
                     کلیه اطلاعاتی است که شما در سایت فروشگاه اینترنتی لایوشاپ وارد کرده اید. حساب شما توسط شما قابل حذف
                     شدن از سیستم نمی باشد و تنها توسط پنل مدیریت امکان پذیر است. محدودیت دسترسی به اطلاعات: فروشگاه
-                    اینترنتی اُکالا دسترسی کارمندان خود به اطلاعات کاربران را محدود نموده و تنها کارمندانی که ارتباط
+                    اینترنتی لایوشاپ دسترسی کارمندان خود به اطلاعات کاربران را محدود نموده و تنها کارمندانی که ارتباط
                     مستقیم با کاربران دارند، دسترسی به کلیه اطلاعات خواهند داشت. کلیه رمزهای عبور به صورت رمز شده در
                     پایگاه داده های فروشگاه اینترنتی اُکالا نگهداری شده و در فرآیند رمزگذاری بیشترین تلاش در استفاده از
-                    الگوریتم ها و روش های پیشرفته شده است. کلیه اطلاعات مربوط به سیستم فروشگاه اینترنتی اُکالا در
+                    الگوریتم ها و روش های پیشرفته شده است. کلیه اطلاعات مربوط به سیستم فروشگاه اینترنتی لایوشاپ در
                     زیرساخت های محافظت شده و در مکان های امن نگهداری می شوند. امیدواریم که با رعایت بیشترین میزان در
                     حفاظت از اطلاعات شما،اطمینان خاطر لازم به شما مشتریان گرامی در استفاده از سیستم فروشگاه اینترنتی
-                    اُکالا را داده باشیم. در صورت هرگونه سوال و یا پرسشی، درخواست خود را تلفنی و یا از طریق بخش تماس با
+                    لایوشاپ را داده باشیم. در صورت هرگونه سوال و یا پرسشی، درخواست خود را تلفنی و یا از طریق بخش تماس با
                     ما به اشتراک بگذارید.
                 </p>
                 <p>*تخفیف های ویژه و کدهای تخفیف از طریق پیامک اطلاع رسانی می گردد. جهت محدود کردن این اطلاع رسانی لطفا
