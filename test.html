@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype>
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
@@ -22,734 +22,346 @@
     <script src="../assets/js/owl.carousel.min.js"></script>
 </head>
 <style>
-    .navbar-color{
-        background:#dfe6e9;
+    .accordions .header {
+        background: #38a7bb;
+        font-size: 13px;
+        color: #fff;
+        line-height: 2.5;
+        padding: 2px;
+        margin-top: 10px;
     }
-    nav ul li .nav-item-font{
+
+    .accordions form {
+        position: relative;
+        margin: 10px 0;
+    }
+
+    .accordions form input {
+        border-radius: 20px !important;
+    }
+
+    .accordions form input:focus {
+        outline: 0;
+        box-shadow: none;
+    }
+    .accordions form input:focus .input-group-text{
+        z-index: 100;
+    }
+    .accordions form .input-group-append {
+        border-radius: 20px;
+        position: absolute;
+        left: 0;
+        top: 2px;
+    }
+
+    .accordions form .input-group-text {
+        transform: rotate(90deg);
+        border-radius: 20px;
+        width: 20px;
+        background: transparent;
+        border: 0;
+    }
+
+    .accordions form .input-group-text i {
+        color: #000;
+        position: absolute;
+        top: -20px;
+        left: 12px;
+    }
+
+    .accordions form .input-group {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .accordion .title{
+        display: flex;
+        justify-content: space-around;
+        font-size: 13px;
+        font-weight: bold;
+        cursor: pointer;
+        color: #195a8e;
+    }
+    .accordion .title span{
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .accordion .content a{
         font-size: 12px;
-        color: #101a27;
+        color: #195a8e;
     }
-    nav ul li .dropdown-menu{
-        background:#dfe6e9;
+    .scrollbar{
+        overflow-y:scroll;
+        max-height: 150px;
     }
-    nav ul li .dropdown-menu ul li{
-        background:#dfe6e9;
+    #scrollbar-category{
+        overflow-y: scroll;
+        color: #38a7bb;
+        scrollbar-width:thin!important;
     }
-    nav ul li .dropdown-menu .sub-dropdown-title{
+    #scrollbar-category::-webkit-scrollbar{
+        width: 8px;
+        background: #eee;
+        border-radius: 6px;
+    }
+    #scrollbar-category::-webkit-scrollbar-thumb{
+        background: #38a7bb;
+        border-radius: 6px;
+    }
+    .accordion ul{
+        padding: 10px 35px 0 35px;
+    }
+    .sort-box{
+        margin-top: 18px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .accordions button{
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        transform: rotate(45deg);
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        border: 0;
+        background: transparent;
+    }
+    .accordions form{
+        width: 90%;
+        margin: 10px auto;
+    }
+    .accordions form input{
         font-size: 11px;
-        color: #38a7bb;
     }
-    nav ul li .dropdown-menu .sub-dropdown-menu{
-        font-size: 10px;
+    .accordions button i{
+        color: #777;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .accordions .title-1{
+        font-size: 13px;
         font-weight: bold;
+        color: #195a8e;
+        cursor: pointer;
+        margin-top: 5px;
+        line-height: 2.3;
     }
-    nav ul li .dropdown-menu li{
-        line-height: 18px;
+    .accordions .icons{
+        color: #395a8e;
+        font-size: 22px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all .4s;
+        transform: rotate(45deg);
     }
-    nav ul li .dropdown-menu i{
+    .scrollbar-1{
+        overflow-y: scroll;
+        max-height: 150px;
+        transition: all .4s;
+        margin:10px 30px;
+    }
+    .scrollbar-1::-webkit-scrollbar{
+        overflow-y: scroll;
+        width: 8px;
+        background: #eee;
+        border-radius: 6px;
+    }
+    .scrollbar-1::-webkit-scrollbar-thumb{
+        border-radius: 6px;
+        background: #38a7bb;
+    }
+    .content-1{
+        opacity: 0;
+        max-height: 0px;
+        overflow: hidden;
+        padding-left: 38px;
         font-size: 12px;
-        font-weight: bold;
-        vertical-align: -4px;
-        color: #38a7bb;
+        color: #195a8e;
+        transition: all .4s;
+        border-bottom: 1px solid #777;
+    }
+    .accordion.active .content-1{
+        opacity: 1;
+        max-height: 150px;
+        border-bottom: 1px solid #eee;
+    }
+    .accordion.active .icons{
+        transform: rotate(90deg);
+    }
+    .accordion.active .scrollbar-1{
+        max-height: 150px;
     }
 
 </style>
 <body>
-<!-- top header -->
-<div class="container-fluid" id="top-header-container">
-    <div class="row">
-        <div id="logo">
-            <h3 class="mt-2">LSHOP</h3>
-        </div>
-        <div class="col-1 col-md-4"></div>
-        <div id="topbar-left">
-            <div class="sabade-kharid float-left">
-                <a href="shopping-cart.html"><i class="fa fa-shopping-cart mr-3 mt-2"><span
-                        class="font mr-2">سبد خرید</span></i></a>
-            </div>
-            <span class="mr-1 mt-2 float-left top-line">|</span>
-            <div class="user-login">
-                <a href="login.html"><i class="fa fa-user float-left mt-2"><span class="font mr-2">ثبت نام | ورود</span></i></a>
-            </div>
-            <span class="ml-3 mt-2 float-left top-line">|</span>
-            <div class="search-icon float-left"></div>
-        </div>
-    </div>
-</div>
-<!-- start of search-wrapper -->
-<div class="search-wrapper">
-    <form action="">
-        <input type="text" placeholder="کلید واژه مورد نظر خود را وارد کنید...">
-    </form>
-</div>
-<!-- end of search-wrapper -->
-<!-- end of top header -->
 
-<nav class="navbar navbar-expand-md py-0 navbar-color">
-    <a href="index.html" class="navbar-brand">LSHOP</a>
-    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#main-nav">
-        <span class="navbar-toggler-icon">
-            <i class="material-icons" style="vertical-align: -12px">dehaze</i>
-        </span>
-    </button>
-    <div class="collapse navbar-collapse" id="main-nav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a href="product.html" class="nav-link nav-item-font">سوپر مارکت</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link dropdown-toggle nav-item-font" data-toggle="dropdown">زیبایی و سلامت</a>
-                <div class="dropdown-menu border-0 w-100 m-0">
-                    <div class="container-fluid">
-                        <div class="row w-100">
-                            <div class="col-12 col-md-3">
-                                <div class="alert m-0 border-0 py-0 px-2">
-                                    <i class="material-icons">keyboard_arrow_left</i>
-                                    <a href="#" class="sub-dropdown-title font-weight-bold">آرایش ناخن</a>
-                                </div>
-                                <ul class="list-group">
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">ناخن گیر و گوشه گیر</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">لاک</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">لاک پاک کن</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">سوهان ناخن</a>
-                                    </li>
-                                    <div class="alert m-0 border-0 py-0 px-2">
-                                        <i class="material-icons">keyboard_arrow_left</i>
-                                        <a href="#" class="sub-dropdown-title font-weight-bold">آرایش لب</a>
-                                    </div>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">رژلب مایع</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">رژلب جامد</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">بالم لب</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-12 col-md-3">
-                                <div class="alert m-0 border-0 py-0 px-2">
-                                    <i class="material-icons">keyboard_arrow_left</i>
-                                    <a href="#" class="sub-dropdown-title font-weight-bold">آرایش چشم</a>
-                                </div>
-                                <ul class="list-group">
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">فرموژه</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">ریمل</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">مداد چشم</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">خط چشم</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کانسیلر</a>
-                                    </li>
-                                    <div class="alert m-0 border-0 py-0 px-2">
-                                        <i class="material-icons">keyboard_arrow_left</i>
-                                        <a href="#" class="sub-dropdown-title font-weight-bold">آرایش مو</a>
-                                    </div>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">اکسیدان</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">رنگ مو</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">اسپری مو</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-12 col-md-3">
-                                <ul class="list-group">
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">ژل مو</a>
-                                    </li>
-                                    <div class="alert m-0 border-0 py-0 px-2">
-                                        <i class="material-icons">keyboard_arrow_left</i>
-                                        <a href="#" class="sub-dropdown-title font-weight-bold">آرایش صورت</a>
-                                    </div>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">پد آرایشی</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">ضدآفتاب</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کزم پودر</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">پنکیک</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">رژگونه</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">پرایمر</a>
-                                    </li>  <li class="list-group-item py-0 px-2 border-0">
-                                    <a href="#" class="sub-dropdown-menu text-dark px-1">مدادابرو</a>
-                                </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">آکوا</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link dropdown-toggle nav-item-font" data-toggle="dropdown">خانه و آشپزخانه</a>
-                <div class="dropdown-menu border-0 m-0 w-100">
-                    <div class="container-fluid">
-                        <div class="row w-100">
-                            <div class="col-12 col-md-3">
-                                <div class="alert m-0 border-0 py-0 px-2">
-                                    <i class="material-icons">keyboard_arrow_left</i>
-                                    <a href="#" class="sub-dropdown-title font-weight-bold">آرایش ناخن</a>
-                                </div>
-                                <ul class="list-group">
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">ناخن گیر و گوشه گیر</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">لاک</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">لاک پاک کن</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">سوهان ناخن</a>
-                                    </li>
-                                    <div class="alert m-0 border-0 py-0 px-2">
-                                        <i class="material-icons">keyboard_arrow_left</i>
-                                        <a href="#" class="sub-dropdown-title font-weight-bold">آرایش لب</a>
-                                    </div>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">رژلب مایع</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">رژلب جامد</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">بالم لب</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-12 col-md-3">
-                                <div class="alert m-0 border-0 py-0 px-2">
-                                    <i class="material-icons">keyboard_arrow_left</i>
-                                    <a href="#" class="sub-dropdown-title font-weight-bold">آرایش چشم</a>
-                                </div>
-                                <ul class="list-group">
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">فرموژه</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">ریمل</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">مداد چشم</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">خط چشم</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کانسیلر</a>
-                                    </li>
-                                    <div class="alert m-0 border-0 py-0 px-2">
-                                        <i class="material-icons">keyboard_arrow_left</i>
-                                        <a href="#" class="sub-dropdown-title font-weight-bold">آرایش مو</a>
-                                    </div>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">اکسیدان</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">رنگ مو</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">اسپری مو</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-12 col-md-3">
-                                <ul class="list-group">
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">ژل مو</a>
-                                    </li>
-                                    <div class="alert m-0 border-0 py-0 px-2">
-                                        <i class="material-icons">keyboard_arrow_left</i>
-                                        <a href="#" class="sub-dropdown-title font-weight-bold">آرایش صورت</a>
-                                    </div>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">پد آرایشی</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">ضدآفتاب</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کزم پودر</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">پنکیک</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">رژگونه</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">پرایمر</a>
-                                    </li>  <li class="list-group-item py-0 px-2 border-0">
-                                    <a href="#" class="sub-dropdown-menu text-dark px-1">مدادابرو</a>
-                                </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">آکوا</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link dropdown-toggle nav-item-font" data-toggle="dropdown">کالای دیجیتال</a>
-                <div class="dropdown-menu border-0 m-0 w-100">
-                   <div class="container-fluid">
-                       <div class="row w-100">
-                           <div class="col-12 col-md-3">
-                               <div class="alert m-0 border-0 py-0 px-2">
-                                   <i class="material-icons">keyboard_arrow_left</i>
-                                   <a href="#" class="sub-dropdown-title font-weight-bold">لوازم جانبی گوشی</a>
-                               </div>
-                               <ul class="list-group">
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">کیف و کاور گوشی</a>
-                                   </li>
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">پاوربانک</a>
-                                   </li>
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">پایه نگهدارنده گوشی</a>
-                                   </li>
-                                   <div class="alert m-0 border-0 py-0 px-2">
-                                       <i class="material-icons">keyboard_arrow_left</i>
-                                       <a href="#" class="sub-dropdown-title font-weight-bold">گوشی موبایل</a>
-                                   </div>
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">سامسونگ</a>
-                                   </li>
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">وآوی</a>
-                                   </li>
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">اپل</a>
-                                   </li>
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">عانر</a>
-                                   </li>
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">شیائومی</a>
-                                   </li>
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">نوکیا</a>
-                                   </li>
-                               </ul>
-                           </div>
-                           <div class="col-12 col-md-3">
-                               <div class="alert m-0 border-0 py-0 px-2">
-                                   <i class="material-icons">keyboard_arrow_left</i>
-                                   <a href="#" class="sub-dropdown-title font-weight-bold">لوازم جانبی </a>
-                               </div>
-                               <ul class="list-group">
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">دوربین</a>
-                                   </li>
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">لنز</a>
-                                   </li>
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">کارت حافظه</a>
-                                   </li>
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">کیف</a>
-                                   </li>
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">کاغذ چاپ عکس</a>
-                                   </li>
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">دوربین دو چشمی و شکاری</a>
-                                   </li>
-                                   <div class="alert m-0 border-0 py-0 px-2">
-                                       <i class="material-icons">keyboard_arrow_left</i>
-                                       <a href="#" class="sub-dropdown-title font-weight-bold">کامپیوتر و تجهیزات جانبی </a>
-                                   </div>
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">تجهیزات مخصوص بازی</a>
-                                   </li>
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">مانیتور</a>
-                                   </li>
-                               </ul>
-                           </div>
-                           <div class="col-12 col-md-3">
-                               <ul class="list-group">
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">کیس های اسمبل شده</a>
-                                   </li>
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">قطعات داخلی کامپیوتر</a>
-                                   </li>
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">موس</a>
-                                   </li>
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">کیبورد</a>
-                                   </li>
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">لپ تاپ</a>
-                                   </li>
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">کیف و کوله و کاور</a>
-                                   </li>
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">کابل صدا</a>
-                                   </li>
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">تبلت</a>
-                                   </li>
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">شارژر موبایل و تبلت</a>
-                                   </li>
-                                   <li class="list-group-item py-0 px-2 border-0">
-                                       <a href="#" class="sub-dropdown-menu text-dark px-1">دوربین های تحت شبکه</a>
-                                   </li>
-                               </ul>
-                           </div>
-                       </div>
-                   </div>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link dropdown-toggle nav-item-font" data-toggle="dropdown">مدوپوشاک</a>
-                <div class="dropdown-menu border-0 m-0 w-100">
-                    <div class="container-fluid">
-                        <div class="row w-100">
-                            <div class="col-12 col-md-3">
-                                <div class="alert m-0 border-0 py-0 px-2">
-                                    <i class="material-icons">keyboard_arrow_left</i>
-                                    <a href="#" class="sub-dropdown-title font-weight-bold">پوشاک زنانه</a>
-                                </div>
-                                <ul class="list-group">
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">پالتو</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">مانتو</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">دامن</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">پیراهن</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">لباس راحتی</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کفش و کتونی</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کمربند</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">جوراب</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">اکسسوری زنانها</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-12 col-md-3">
-                                <div class="alert m-0 border-0 py-0 px-2">
-                                    <i class="material-icons">keyboard_arrow_left</i>
-                                    <a href="#" class="sub-dropdown-title font-weight-bold">پوشاک مردانه</a>
-                                </div>
-                                <ul class="list-group">
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کت و شلوار</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">لباس راحتی</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کفش و کتونی</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کمربند</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">جوراب</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">اکسسوری مردانه</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-12 col-md-3">
-                                <div class="alert m-0 border-0 py-0 px-2">
-                                    <i class="material-icons">keyboard_arrow_left</i>
-                                    <a href="#" class="sub-dropdown-title font-weight-bold">پوشاک دخترانه</a>
-                                </div>
-                                <ul class="list-group">
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">لباس راحتی</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">دامن</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">شلوار</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کلاه</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">عینک</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">لباس عروسکی</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">لباس اسپرتا</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link dropdown-toggle nav-item-font" data-toggle="dropdown">کتاب و مجله</a>
-                <div class="dropdown-menu border-0 m-0 w-100">
-                    <div class="container-fluid">
-                        <div class="row w-100">
-                            <div class="col-12 col-md-3">
-                                <div class="alert m-0 border-0 py-0 px-2">
-                                    <i class="material-icons">keyboard_arrow_left</i>
-                                    <a href="#" class="sub-dropdown-title font-weight-bold">مجلات داخلی و خارجی</a>
-                                </div>
-                                <ul class="list-group">
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کتاب های رایگان</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کتاب های صوتی</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">پادکست</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">داستان و رمان</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">روانشناسی</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کتاب های مد و استایل</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کتاب های انگیزشی</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کتاب آشپزی</a>
-                                    </li>
-                                    <li class="list-group-item py-0 px-2 border-0">
-                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کتاب کودکا</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link nav-item-font">گلخانه</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link nav-item-font">پیگیری سفارش</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-
-<!-- modal -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#mymodal">test modal</button>
-            <div class="modal fade" id="mymodal">
-                <div class="modal-dialog">
-                   <div class="modal-content">
-                       <div class="modal-header">
-                           <div class="modal-title">
-                               modal title
-                               <button type="button" class="close" data-dismiss="modal">
-                                   <span>&times;</span>
-                               </button>
-                           </div>
-                       </div>
-                       <div class="modal-body">
-                           <p>here you can add any thing</p>
-                       </div>
-                       <div class="modal-footer">
-                           <button type="button" class="btn btn-success">Login</button>
-                       </div>
-                   </div>
+            <div class="carousel slide carousel-fade" data-ride="carousel" id="mycarousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#mycarousel" data-slide-to="1"></li>
+                </ol>
+                <div class="carousel-item active">
+                    <a href="">
+                        <img src="../assets/images/category-images/swpermarket-categori-0.jpg" alt=""
+                             class="w-100 img-fluid">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="">
+                        <img src="../assets/images/category-images/swpermarket-category-1.jpg" alt=""
+                             class="w-100 img-fluid">
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- end modal -->
-<!doctype html>
-<html lang="fa">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>L-SHOP</title>
-    <!-- bootstrap css -->
-    <link rel="stylesheet" href="../assets/css/bootstrap-rtl.css">
-    <link rel="stylesheet" href="../assets/css/bootstrap-reboot-rtl.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../assets/css/icon.css">
-    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../assets/css/owl.theme.default.css">
-    <link rel="stylesheet" href="../assets/css/jquery.simpleTicker.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
-    <!-- bootstrap js -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="../assets/js/bootstrap.js"></script>
-    <script src="../assets/js/jquery.simpleTicker.js"></script>
-    <script src="../assets/js/custom.js"></script>
-    <script src="../assets/js/owl.carousel.min.js"></script>
-</head>
-<body>
-<!-- top header -->
-<div class="container-fluid" id="top-header-container">
+<div class="container-fluid">
     <div class="row">
-        <div id="logo">
-            <h3 class="mt-2">LSHOP</h3>
+        <div class="col-md-4 col-lg-3 mt-3">
+            <div class="right-banner font-right-banner bg-white">
+                <div class="accordions">
+                    <div class="header">دسته بندی کالاهای سوپرمارکتی</div>
+                    <form action="">
+                        <input type="text" class="form-control form-control-sm" placeholder="محصول مورد نظر خود را جستجو کنید...">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                        <div class=" accordion">
+                            <div class="title-1 d-inline mr-4">کالاهای اساسی و خواربار</div>
+                            <div class="icons float-left ml-4">&times;</div>
+                        <div class="content-1 p-0 w-100">
+                            <ul class="p-0">
+                                <div class="scrollbar-1">
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                </div>
+                            </ul>
+                        </div>
+                        </div>
+                    <div class=" accordion">
+                        <div class="title-1 d-inline mr-4">کالاهای اساسی و خواربار</div>
+                        <div class="icons float-left ml-4">&times;</div>
+                        <div class="content-1 p-0 w-100">
+                            <ul class="p-0">
+                                <div class="scrollbar-1">
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class=" accordion">
+                        <div class="title-1 d-inline mr-4">کالاهای اساسی و خواربار</div>
+                        <div class="icons float-left ml-4">&times;</div>
+                        <div class="content-1 p-0 w-100">
+                            <ul class="p-0">
+                                <div class="scrollbar-1">
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                    <li><a href="">نان</a></li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-1 col-md-4"></div>
-        <div id="topbar-left">
-            <div class="sabade-kharid float-left">
-                <a href="shopping-cart.html"><i class="fa fa-shopping-cart mr-3 mt-2"><span
-                        class="font mr-2">سبد خرید</span></i></a>
-            </div>
-            <span class="mr-1 mt-2 float-left text-secondary">|</span>
-            <div class="user-login">
-                <a href="login.html"><i class="fa fa-user float-left mt-2"><span class="font mr-2">ثبت نام | ورود</span></i></a>
-            </div>
-            <span class="ml-3 mt-2 float-left text-secondary">|</span>
-            <div class="search-icon float-left"></div>
+        <div class="col-12 col-md-8 col-lg-9">
+            <section class="sale-timeout-1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <p id="amazing-suggest-1"></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
-</div>
-<!-- start of search-wrapper -->
-<div class="search-wrapper">
-    <form action="">
-        <input type="text" placeholder="کلید واژه مورد نظر خود را وارد کنید...">
-    </form>
-</div>
-<!-- end of search-wrapper -->
 
-<!-- start of top header -->
-<nav class="navbar navbar-expand-md py-0 navbar-color">
-    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#main-nav">
-        <span class="navbar-toggler-icon">
-            <i class="material-icons" style="vertical-align: -12px">dehaze</i>
-        </span>
-    </button>
-    <div class="collapse navbar-collapse" id="main-nav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a href="index.html" class="nav-link nav-item-font">صفحه اصلی</a>
-            </li>
-            <li class="nav-item">
-                <a href="" class="nav-link nav-item-font">راهنمای استفاده از سایت</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link nav-item-font">پیگیری سفارش</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-<!-- end of header -->
-
-<!-- start of advertise -->
-<div class="container-fluid mt-5" style=" background:#dfe6e9;">
-    <div class="row justify-content-center">
-        <div class="col-12">
-            <div class="top-title mt-3">
-                <div id="demo" class="ticker">
-                    <ul>
-                        <li>کتابهای درسی ارزان برای اجاره</li>
-                        <li>دیگر نیازی نیست پول زیادی صرف خرید کتابهای درسی کنید</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-4 col-md-3 mt-3">
-            <div class="card advertise-box">
-                <img src="../assets/images/rent-book/rent.jpg" class="card-img-top " alt="">
-                <div class="card-footer p-0">
-                    <p class="m-1">اجاره کنید</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-4 col-md-3 mt-3">
-            <div class="card advertise-box">
-                <img src="../assets/images/rent-book/get.jpg" class="card-img-top " alt="">
-                <div class="card-footer p-0">
-                    <p class="m-1">تحویل بگیرید</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-4 col-md-3 mt-3">
-            <div class="card advertise-box ">
-                <img src="../assets/images/rent-book/return.png" class="card-img-top " alt="">
-                <div class="card-footer p-0">
-                    <p class="m-1">برگردانید</p>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
-<!-- end of advertise -->
+
 <script>
-    $.simpleTicker($("#demo"), {
-        speed: 1000,
-        delay: 3000,
-        easing: 'swing',
-        effectType: 'fade'
-    });
+    $(document).ready(function () {
+        $('.accordion .title-1').click(function () {
+            $(this).parent().toggleClass('active');
+        })
+    })
 </script>
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 </body>
 </html>

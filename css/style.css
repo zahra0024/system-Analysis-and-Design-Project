@@ -551,7 +551,7 @@ nav ul li{
 
 /* styles of sidebar */
 .font-right-banner{
-    font-size: 14px;
+    font-size: 13px;
     background:#38a7bb ;
     color: #fff;
 }
@@ -579,27 +579,26 @@ nav ul li{
 .category-searh button .fa{
     color: #636e72;
 }
-.title .text{
-    font-size: 14px;
-    cursor: pointer;
-    color: #195a8e;
+.accordion .title{
+    font-size: 13px;
     font-weight: bold;
-}
-.accordion.active .title{
-    border-bottom: 1px solid #c8d6e5;
+    color: #195a8e;
+    cursor: pointer;
+    border-top: 1px solid #d9d9d9;
 }
 .title .icon{
     font-size:x-large;
     cursor: pointer;
-    transform: rotate(90deg);
+    transform: rotate(45deg);
     padding-right: 15px!important;
 }
 .accordion.active .title .icon{
-    transform: rotate(45deg);
+    transform: rotate(90deg);
 }
 .scrollbar{
     overflow-y: scroll;
-    max-height: 150px;
+    max-height: 130px;
+    margin-left: 28px;
     transition: all .5s;
 }
 #scroll-category {
@@ -618,8 +617,9 @@ nav ul li{
     border-radius: 6px;
 }
 .content{
-    border-bottom: 1px solid #d9d9d9;
-    opacity: 1;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
     transition: all .5s;
 }
 .accordion-font{
@@ -627,16 +627,15 @@ nav ul li{
     color: #195a8e;
 }
 .accordion.active .content{
-    opacity: 0;
-    max-height: 0;
-    transition: all .5s;
+    opacity: 1;
+    max-height: 130px;
 }
 .accordion ul li:hover{
     background: #c8d6e5;
 }
 .accordion.active .scrollbar{
-    max-height: 0;
-    transition: all .5s;
+    max-height: 130px;
+    transition: all .4s;
 }
 /* end of sidebar */
 
@@ -939,27 +938,29 @@ nav ul li{
 }
 .nav-pills .nav-item .nav-link{
     display: block;
-    padding: 4px 8px;
-    position: relative;
-    font-size: 13px;
+    font-size: 12px;
+    font-weight: bold;
     line-height: 25px;
     vertical-align: middle;
     border-radius: 5px;
     color: #195a8e;
+    background: transparent;
+}
+.box-nav-pills .dropdown{
+    border-top: 2px solid #d3d9df;
 }
 .nav-pills .nav-item .nav-link:hover{
     background: #d3d9df;
 }
-.nav-pills .nav-link.active,.nav-pills .show>.nav-link{
-    background: #38a7bb;
-    color: #fff;
+.box-nav-pills-container .title{
+    color: #195a8e;
 }
-.box-nav-pills{
-    box-shadow: 0 0 6px rgba(0,0,0,.1);
-    -webkit-box-shadow: 0 0 6px rgba(0,0,0,.1);
-    -moz-box-shadow: 0 0 6px rgba(0,0,0,.1);
-    -o-box-shadow: 0 0 6px rgba(0,0,0,.1);
-    border: 1px solid #e4e4e4;
+.box-nav-pills-container .title button{
+    background: #d3d9df;
+}
+.box-nav-pills-container .title button:focus{
+    outline: 0;
+    box-shadow: none;
 }
 .font-price{
     font-size: 13px;
