@@ -301,15 +301,15 @@ nav ul li{
     border-radius: 50%;
     line-height: 30px;
 }
-.servises .content h6{
-    font-size: 14px;
+.servises .content-services h6{
+    font-size: 14px!important;
 }
-.servises .content p{
-    color: #9e9e9e;
-    font-size: 11px;
+.servises .content-services p{
+    color: #9e9e9e!important;
+    font-size: 11px!important;
 }
-.servises .content{
-    border-bottom: none;
+.servises .content-services{
+    border-bottom: none!important;
 }
 /* end of services */
 /* end of first-slider*/
@@ -580,7 +580,7 @@ nav ul li{
     color: #636e72;
 }
 .accordion .title{
-    font-size: 13px;
+    font-size: 11px;
     font-weight: bold;
     color: #195a8e;
     cursor: pointer;
@@ -681,7 +681,8 @@ nav ul li{
     background: #fff;
 }
 #sale-timeout h3{
-    font-size: 22px;
+    font-size: 20px;
+    color: #1b3240;
 }
 #sale-timeout span{
     font-size: 14px;
@@ -689,30 +690,36 @@ nav ul li{
     justify-content: center;
     color: #38a7bb;
 }
+.sale-timeout-counter{
+    display: flex;
+    justify-content: center;
+}
 .sale-timeout-content button a{
     display: flex;
     justify-content: center;
     color: #fff;
+    font-size: 15px;
     font-weight: bold;
 }
 .sale-timeout-content button{
-    width: 230px;
-    height: 55px;
-    line-height: 50px;
-    background: #38a7bb;
+    width: 205px;
+    height: 50px;
+    line-height: 45px;
+    background: #1b3240;
     margin: 10px 5px;
-    border: 1px solid #38a7bb;
+    border: 1px solid #1b3240;
 }
 #sale-timeout .sale-timeout-content .sale-timeout-counter>div{
-    width: 70px;
-    height: 100px;
-    background: url("../images/category-images/timer-bg.jpg");
+    width: 60px;
+    background: #1b3240;
     float: right;
-    line-height: 15px;
+    line-height: 10px;
     color: #fff;
-    display: inline-block;
-    padding: 25px 25px;
+    display: inline-table;
+    padding: 15px 10px;
     margin: 25px 5px;
+    text-align: center;
+    font-size: 14px;
 }
 #sale-timeout .sale-timeout-content .sale-timeout-counter div:last-child{
     display: none;
@@ -856,20 +863,6 @@ nav ul li{
 .best-seller .best-seller-item .text .price{
     color:#38a7bb;
 }
-/* pages */
-.pages{
-    position: relative;
-}
-.pages .pages-number{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%,0);
-    background: #38a7bb;
-}
-.pages .pages-number button:hover{
-    background: #2980b9;
-}
 /* end of best-seller */
 
 /* start of sidebar / category_1 */
@@ -894,7 +887,7 @@ nav ul li{
 }
 .ios-switch .switch-body{
     width: 48px;
-    border: 1px solid gray;
+    border: 1px solid #eee;
     background: #ddd;
     border-radius: 20px;
     margin-right: 10px;

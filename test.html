@@ -20,6 +20,7 @@
     <script src="../assets/js/bootstrap.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/owl.carousel.min.js"></script>
+    <script src="js/jquery.simple.timer.js"></script>
 </head>
 <style>
     .accordions .header {
@@ -44,9 +45,11 @@
         outline: 0;
         box-shadow: none;
     }
-    .accordions form input:focus .input-group-text{
+
+    .accordions form input:focus .input-group-text {
         z-index: 100;
     }
+
     .accordions form .input-group-append {
         border-radius: 20px;
         position: absolute;
@@ -75,7 +78,8 @@
         justify-content: center;
         margin: 0 auto;
     }
-    .accordion .title{
+
+    .accordion .title {
         display: flex;
         justify-content: space-around;
         font-size: 13px;
@@ -83,41 +87,50 @@
         cursor: pointer;
         color: #195a8e;
     }
-    .accordion .title span{
+
+    .accordion .title span {
         font-size: 16px;
         cursor: pointer;
     }
-    .accordion .content a{
+
+    .accordion .content a {
         font-size: 12px;
         color: #195a8e;
     }
-    .scrollbar{
-        overflow-y:scroll;
+
+    .scrollbar {
+        overflow-y: scroll;
         max-height: 150px;
     }
-    #scrollbar-category{
+
+    #scrollbar-category {
         overflow-y: scroll;
         color: #38a7bb;
-        scrollbar-width:thin!important;
+        scrollbar-width: thin !important;
     }
-    #scrollbar-category::-webkit-scrollbar{
+
+    #scrollbar-category::-webkit-scrollbar {
         width: 8px;
         background: #eee;
         border-radius: 6px;
     }
-    #scrollbar-category::-webkit-scrollbar-thumb{
+
+    #scrollbar-category::-webkit-scrollbar-thumb {
         background: #38a7bb;
         border-radius: 6px;
     }
-    .accordion ul{
+
+    .accordion ul {
         padding: 10px 35px 0 35px;
     }
-    .sort-box{
+
+    .sort-box {
         margin-top: 18px;
         font-size: 14px;
         font-weight: 600;
     }
-    .accordions button{
+
+    .accordions button {
         position: absolute;
         top: 5px;
         left: 10px;
@@ -128,21 +141,25 @@
         border: 0;
         background: transparent;
     }
-    .accordions form{
+
+    .accordions form {
         width: 90%;
         margin: 10px auto;
     }
-    .accordions form input{
+
+    .accordions form input {
         font-size: 11px;
     }
-    .accordions button i{
+
+    .accordions button i {
         color: #777;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
-    .accordions .title-1{
+
+    .accordions .title-1 {
         font-size: 13px;
         font-weight: bold;
         color: #195a8e;
@@ -150,7 +167,8 @@
         margin-top: 5px;
         line-height: 2.3;
     }
-    .accordions .icons{
+
+    .accordions .icons {
         color: #395a8e;
         font-size: 22px;
         font-weight: bold;
@@ -158,23 +176,27 @@
         transition: all .4s;
         transform: rotate(45deg);
     }
-    .scrollbar-1{
+
+    .scrollbar-1 {
         overflow-y: scroll;
         max-height: 150px;
         transition: all .4s;
-        margin:10px 30px;
+        margin: 10px 30px;
     }
-    .scrollbar-1::-webkit-scrollbar{
+
+    .scrollbar-1::-webkit-scrollbar {
         overflow-y: scroll;
         width: 8px;
         background: #eee;
         border-radius: 6px;
     }
-    .scrollbar-1::-webkit-scrollbar-thumb{
+
+    .scrollbar-1::-webkit-scrollbar-thumb {
         border-radius: 6px;
         background: #38a7bb;
     }
-    .content-1{
+
+    .content-1 {
         opacity: 0;
         max-height: 0px;
         overflow: hidden;
@@ -184,157 +206,276 @@
         transition: all .4s;
         border-bottom: 1px solid #777;
     }
-    .accordion.active .content-1{
+
+    .accordion.active .content-1 {
         opacity: 1;
         max-height: 150px;
         border-bottom: 1px solid #eee;
     }
-    .accordion.active .icons{
+
+    .accordion.active .icons {
         transform: rotate(90deg);
     }
-    .accordion.active .scrollbar-1{
+
+    .accordion.active .scrollbar-1 {
         max-height: 150px;
+    }
+
+    .sale-timeout .sale-inner .amazing-suggest {
+        width: 35%;
+        height: 45px;
+        line-height: 3;
+        background: #38a7bb;
+        position: relative;
+        margin: 10px -5px;
+        color: #fff;
+        font-size: 15px;
+        padding: 0 15px;
+        z-index: 10;
+    }
+
+    .sale-timeout .sale-inner .amazing-suggest:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 5px solid transparent;
+        border-left: 5px solid #195a8e;
+        position: absolute;
+        right: 0;
+        top: -5px;
+        z-index: -10;
+    }
+
+    .sale-timeout .sale-inner .amazing-suggest:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -25px;
+        transform: skew(-42deg, 0);
+        z-index: -10;
+        background: inherit;
+    }
+
+    .sale-timeout .sale-inner .title {
+        font-size: 18px;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .sale-timeout .sale-inner .sub-title {
+        display: block;
+        color: #38a7bb;
+        font-size: 13px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .sale-timeout .sale-inner .sale-timeout-counter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 3;
+    }
+
+    .sale-timeout .sale-inner .sale-timeout-counter > div {
+        max-width: 50px;
+        height: 70px;
+        background: #323d43;
+        display: inline-table;
+        text-align: center;
+        padding: 15px 10px;
+        line-height: 1;
+        font-size: 15px;
+        color: #fff;
+        margin: 9px;
+    }
+
+    .sale-timeout .sale-inner .sale-timeout-counter div:last-child {
+        display: none;
+    }
+
+    .sale-timeout .sale-inner a {
+        height: 40px;
+        background: #1b3240;
+        padding: 10px 0;
+        width: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px auto;
+        color: #fff;
+        font-size: 15px;
+    }
+
+    @media all and (min-width: 575.98) and (max-width: 200px) {
+        .sale-timeout .sale-inner a {
+            width: 95%;
+        }
+    }
+
+    @media all and (min-width: 767.98) and (max-width: 576px) {
+
+    }
+
+    @media all and (min-width: 991.99) and (max-width: 768px) {
+    }
+
+    @media all and (min-width: 1199) and (max-width: 992px) {
+
+    }
+
+    @media all and (min-width: 1366) and (max-width: 1200) {
+
+    }
+    figure img{
+        border-bottom: 1px solid #195a8e;
+    }
+    .title{
+        color: #195a8e;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .sub-title{
+        font-size: 12px;
+    }
+    .score-box{
+        font-size: 13px;
+        color: #777;
+    }
+    .score-box i{
+        font-size: 16px;
+    }
+    .expression{
+        font-size: 13px;
+        color: #195a8e;
+        font-weight: bold;
+    }
+    .comment{
+        font-size: 13px;
+    }
+    .add-to-cart-1{
+        width: 100%;
+        line-height: 31px;
+        color: #fff;
+        font-size: 15px;
+        border-radius: 3px;
+        text-align: center;
+        background: #38a7bb;
+        display: block;
+    }
+    .related-product-1{
+        border-bottom: 1px solid #195a8e;
+        width: 98%;
+        margin: 0 auto;
+    }
+    .text_2{
+        font-size: 12px;
+        color: #195a8e;
+        text-align: center;
+        font-weight: 600;
     }
 
 </style>
 <body>
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12">
-            <div class="carousel slide carousel-fade" data-ride="carousel" id="mycarousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#mycarousel" data-slide-to="1"></li>
-                </ol>
-                <div class="carousel-item active">
-                    <a href="">
-                        <img src="../assets/images/category-images/swpermarket-categori-0.jpg" alt=""
-                             class="w-100 img-fluid">
-                    </a>
+<div class="container-fluid mt-3">
+    <div class="row bg-white m-0">
+        <div class="col-md-4 ">
+            <figure class="bg-white text-center">
+                <img src="../assets/images/category_1/egg_1.jpg" class="img-fluid" alt="">
+                <div class="box-list py-3 ">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href=""><img src="../assets/images/category_1/egg_2.jpg" class="img-fluid" alt=""></a></li>
+                        <li class="list-inline-item"><a href=""><img src="../assets/images/category_1/egg_2.jpg" class="img-fluid" alt=""></a></li>
+                    </ul>
                 </div>
-                <div class="carousel-item">
-                    <a href="">
-                        <img src="../assets/images/category-images/swpermarket-category-1.jpg" alt=""
-                             class="w-100 img-fluid">
-                    </a>
+            </figure>
+        </div>
+        <div class="col-md-8">
+            <p class="title mt-5 mb-0">تخم مرغ پایتخت بسته 6 عددی</p>
+            <span class="sub-title text-secondary">Paytakht Egg Pack Of 6</span>
+            <hr style="border-bottom: 1px solid #195a8e">
+            <div class="score-box d-flex">
+                <i class="material-icons text-secondary">star</i>
+                <i class="material-icons text-info">star</i>
+                <i class="material-icons text-info">star</i>
+                <i class="material-icons text-info">star</i>
+                <i class="material-icons text-info">star</i>
+                <span> | امتیاز کاربران به این محصول</span>
+            </div>
+            <p class="comment mt-3"><span class="expression mt-3">دسته بندی : </span>تخم مرغ </p>
+            <p class="comment"><span class="expression">برند : </span>پایتخت </p>
+            <p class="comment"><span class="expression">برند : </span>پایتخت </p>
+            <p class="comment"><span class="expression">گارانتی سلامت فیزیکی کالا توسط :</span> لایو شاپ </p>
+            <p class="comment"><span class="expression">قیمت برای مصرف کننده : </span>6,980</p>
+            <div class="detail-product-footer-1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-2 p-1">
+                            <form action="">
+                                <div class="form-group">
+                                    <input type="number" class="form-control form-control-sm" value="1" min="1" max="100" step="1">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-4 p-1">
+                            <a href="" class="add-to-cart-1" >افزودن به سبد</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-4 col-lg-3 mt-3">
-            <div class="right-banner font-right-banner bg-white">
-                <div class="accordions">
-                    <div class="header">دسته بندی کالاهای سوپرمارکتی</div>
-                    <form action="">
-                        <input type="text" class="form-control form-control-sm" placeholder="محصول مورد نظر خود را جستجو کنید...">
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                    </form>
-                        <div class=" accordion">
-                            <div class="title-1 d-inline mr-4">کالاهای اساسی و خواربار</div>
-                            <div class="icons float-left ml-4">&times;</div>
-                        <div class="content-1 p-0 w-100">
-                            <ul class="p-0">
-                                <div class="scrollbar-1">
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
+    <div class="row bg-white">
+        <div class="col-12">
+            <section>
+                <p class="related-product-1">محصولات مرتبط</p>
+                <div class="slider">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <div class="owl-carousel owl-theme">
+                                <div class="item">
+                                    <a href="">
+                                        <div class="card border-0">
+                                            <div class="card-body">
+                                                <img src="../assets/images/category_1/egg_1.jpg" class="img-fluid w-100" alt="">
+                                            </div>
+                                            <div class="card-footer border-0 bg-white">
+                                                <p class="text_2">تخم مرغ پایتخت بسته 6 عددی</p>
+                                                <div class="text-price">6,980 تومان</div>
+                                            <div class="product-box-footer">
+                                                <div class="cantainer">
+                                                    <div class="row">
+                                                        <div class="col-4 p-1 ">
+                                                            <form action="">
+                                                                <input type="number" class="form-control" value="1" min="1" max="100" step="1">
+                                                            </form>
+                                                        </div>
+                                                        <div class="col-8 p-1 w-100">
+                                                            <a href="" class="add-to-cart-1">افزودن به سبد</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                            </ul>
-                        </div>
-                        </div>
-                    <div class=" accordion">
-                        <div class="title-1 d-inline mr-4">کالاهای اساسی و خواربار</div>
-                        <div class="icons float-left ml-4">&times;</div>
-                        <div class="content-1 p-0 w-100">
-                            <ul class="p-0">
-                                <div class="scrollbar-1">
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                </div>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class=" accordion">
-                        <div class="title-1 d-inline mr-4">کالاهای اساسی و خواربار</div>
-                        <div class="icons float-left ml-4">&times;</div>
-                        <div class="content-1 p-0 w-100">
-                            <ul class="p-0">
-                                <div class="scrollbar-1">
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                    <li><a href="">نان</a></li>
-                                </div>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-8 col-lg-9">
-            <section class="sale-timeout-1">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <p id="amazing-suggest-1"></p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
     </div>
-
 </div>
-
+<style>
+    .text_1 {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+</style>
 <script>
     $(document).ready(function () {
         $('.accordion .title-1').click(function () {

@@ -176,9 +176,9 @@
       return false;
     }
 
-    element.find('.seconds').html(finalValues.pop() + '<span class="mt-3 text-white">ثانیه</span>');
-    element.find('.minutes').html(finalValues.pop() + '<span class="mt-3 text-white">دقیقه</span>');
-    element.find('.hours').html(finalValues.pop() + '<span class="mt-3 text-white">ساعت</span>');
+    element.find('.seconds').html(finalValues.pop() + '<p class="mt-3 text-white">ثانیه</p>');
+    element.find('.minutes').html(finalValues.pop() + '<p class="mt-3 text-white">دقیقه</p>');
+    element.find('.hours').html(finalValues.pop() + '<p class="mt-3 text-white">ساعت</p>');
   };
 
 
