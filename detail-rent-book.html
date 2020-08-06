@@ -14,12 +14,17 @@
     <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/persian-datepicker.css">
+    <link rel="stylesheet" href="../assets/css/persian-datepicker.min.css">
+    <link rel="stylesheet" href="../assets/css/persian-datepicker-dark.min.css">
     <!-- bootstrap js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="../assets/js/jquery.simple.timer.js"></script>
     <script src="../assets/js/bootstrap.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/owl.carousel.min.js"></script>
+    <script src="../assets/js/persian-datepicker.js"></script>
+    <script src="../assets/js/persian-date.min.js"></script>
 </head>
 <body>
 <!-- start of top header -->
@@ -585,29 +590,19 @@
                     <div class="title font-weight-bold book-title p-2">
                         رزرو و اجاره
                     </div>
-                    <div class="time-picker p-3">
-                        <span class="book-info mx-3">تاریخ شروع اجاره</span>
-                        <span class="book-info mx-3 float-left">تاریخ پایان اجاره </span>
-                    </div>
-                    <div class="date-picker-wrapper">
-                        <div class="input">
-                            <input type="text" class="form-control" placeholder="--/--/----">
-                        </div>
-                        <span class="book-info">تا</span>
-                        <div class="input">
-                            <input type="text" class="form-control" placeholder="--/--/----">
-                        </div>
-                    </div>
-                    <div class="number mt-3 d-flex">
-                        <span class="pr-4 book-info w-50 mt-2">تعداد</span>
-                        <form action="" class="w-50 ml-md-2 ml-3">
-                            <div class="form-group ">
-                                <input type="number" class="form-control py-0 book-info" value="1" min="1" max="5"
-                                       step="1">
-                            </div>
+                        <form action="" class="form-inline">
+                            <label for="" class="book-info mx-2">تاریخ شروع اجاره : </label>
+                            <input type="text" class="form-control w-50" id="mydate">
                         </form>
-                    </div>
-                    <div class="calculate-price">
+                        <form action="" class="mt-3 form-inline">
+                            <label for="" class="book-info mx-2">تاریخ پایان اجاره : </label>
+                            <input type="text" class="form-control w-50" id="mydate-1">
+                        </form>
+                    <form action="" class="form-inline mt-3">
+                        <label for="" class="book-info mx-2">تعداد : </label>
+                        <input type="number" class="form-control w-50 p-1 book-info" value="1" min="1" max="100" step="1">
+                    </form>
+                    <div class="calculate-price mt-3">
                         <button type="button" class="btn btn-info mb-2">محاسبه هزینه</button>
                     </div>
                 </div>
@@ -615,7 +610,7 @@
                     <ul class="nav nav-tabs">
                         <li class="nav-item font-weight-bold ">
                             <a href="#nav-tab-1" class="nav-link border-0 rounded-0 text-tab active show"
-                               data-toggle="tab">توضیحات</a>
+                               data-toggle="tab">خلاصه کتاب</a>
                         </li>
                         <li class="nav-item font-weight-bold">
                             <a href="#nav-tab-2" class="nav-link border-0 rounded-0 text-tab"
@@ -1020,6 +1015,12 @@
 </div>
 <!-- end of loader -->
 
+<script>
+    $(document).ready(function () {
+        $('#mydate').datepicker();
+        $('#mydate-1').datepicker();
+    });
+</script>
 
 </body>
 </html>
