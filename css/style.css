@@ -526,6 +526,64 @@ nav ul li{
 }
 /* end of footer */
 
+/* start of loader */
+.loader-wrapper{
+    width: 100٪;
+    height: 100%;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+.loader{
+    height: 45px;
+    width: 45px;
+    position: relative;
+    animation: rotate .75s ease-in-out 0s infinite;
+}
+.loader span{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: anim 1.5s 0s ease-in-out infinite;
+}
+.loader span:nth-child(1){
+    background: #00a7ce;
+    z-index: 10;
+}
+.loader span:nth-child(2){
+    background: #72c45a;
+    transform: translate(25px,0);
+}
+.loader span:nth-child(3){
+    background: #f963a3;
+    transform: translate(0,25px);
+}
+.loader span:nth-child(4){
+    background: #ffd15d;
+    transform: translate(25px,25px);
+}
+@keyframes anim {
+    50%,60%{
+        transform:scale(1.2) translate(12.5px,12.5px);
+    }
+}
+@keyframes rotate {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* end of loader */
+
 @media all and (min-width: 575.98) and (max-width: 200px) {
 }
 @media all and (min-width: 767.98) and (max-width: 576px){
@@ -1334,5 +1392,47 @@ nav ol{
 .sale-timeout-content button{
     margin: 0 auto;
     display: flex;
+    justify-content: center;
+}
+/* styles of track-order */
+.page-content-wrapper{
+    border: 1px solid #38a7bb;
+    position: relative;
+}
+.page-content-wrapper .title{
+    font-size: 14px;
+    padding: 0 10px;
+    background: #38a7bb;
+    line-height: 35px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translate(-50%, 0px);
+}
+.page-content-wrapper .text{
+    font-size: 14px;
+}
+.page-content-wrapper form input{
+    width: 40%;
+    height: 35px;
+    border-radius: 0;
+    display: flex;
+    margin: 0 auto;
+}
+.page-content-wrapper form input:focus{
+    outline: 0;
+    box-shadow: none;
+}
+.page-content-wrapper button{
+    width: 40%;
+    background: #38a7bb;
+    border: 0;
+    line-height: 35px;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    margin: 0 auto;
     justify-content: center;
 }

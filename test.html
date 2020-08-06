@@ -376,6 +376,37 @@
         text-align: center;
         font-weight: 600;
     }
+    .text{
+        font-size: 12px;
+        color: #195a8e;
+        text-align: center;
+    }
+    .price{
+        font-size: 12px;
+        color: #38a7bb;
+        text-align: center;
+        font-weight: bold;
+    }
+    .card-footer input{
+        height: 25px;
+        font-size: 12px;
+    }
+    .card-footer .col-8{
+        padding: 5px;
+        background: #38a7bb;
+        line-height: 20px;
+        height: 25px;
+        text-align: center;
+        border-radius: 3px;
+    }
+    .add-card{
+        font-size: 13px;
+        color: #fff;
+        line-height: 15px;
+    }
+    .card-footer .col-4{
+        display: contents;
+    }
 
 </style>
 <body>
@@ -427,46 +458,42 @@
             </div>
         </div>
     </div>
-    <div class="row bg-white">
+    <div class="row">
         <div class="col-12">
-            <section>
-                <p class="related-product-1">محصولات مرتبط</p>
-                <div class="slider">
-                    <div class="card border-0">
-                        <div class="card-body">
-                            <div class="owl-carousel owl-theme">
-                                <div class="item">
-                                    <a href="">
-                                        <div class="card border-0">
-                                            <div class="card-body">
-                                                <img src="../assets/images/category_1/egg_1.jpg" class="img-fluid w-100" alt="">
-                                            </div>
-                                            <div class="card-footer border-0 bg-white">
-                                                <p class="text_2">تخم مرغ پایتخت بسته 6 عددی</p>
-                                                <div class="text-price">6,980 تومان</div>
-                                            <div class="product-box-footer">
-                                                <div class="cantainer">
-                                                    <div class="row">
-                                                        <div class="col-4 p-1 ">
-                                                            <form action="">
-                                                                <input type="number" class="form-control" value="1" min="1" max="100" step="1">
-                                                            </form>
-                                                        </div>
-                                                        <div class="col-8 p-1 w-100">
-                                                            <a href="" class="add-to-cart-1">افزودن به سبد</a>
-                                                        </div>
+            <div class="slider">
+                <div class="card border-0">
+                    <div class="card-body">
+                        <div class="owl-carousel owl-theme">
+                            <div class="item">
+                                <a href="">
+                                    <div class="card border-0">
+                                        <div class="card-body">
+                                            <img src="../assets/images/category_1/egg_1.jpg" class="img-fluid" alt="">
+                                            <div class="text">تخم مرغ پایتخت بسته 6 عددی</div>
+                                            <div class="price">6,980 تومان</div>
+                                        </div>
+                                        <div class="card-footer border-0 bg-white p-0">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-4 p-1">
+                                                        <form action="">
+                                                           <div class="form-group">
+                                                               <input type="number" class="form-control p-1 mr-1" value="1" min="1" max="100" step="2">
+                                                           </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="col-8 mx-1">
+                                                        <a href="" class="add-card">افزودن به سبد</a>
                                                     </div>
                                                 </div>
                                             </div>
-                                            </div>
                                         </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                                    </div>
+                                </a>
+
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
     </div>
 </div>

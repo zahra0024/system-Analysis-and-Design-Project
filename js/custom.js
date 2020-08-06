@@ -55,6 +55,12 @@ $(document).ready(function () {
             }
         }
     });
+    // start of loader
+    setTimeout(function () {
+        $('.loader-wrapper').fadeOut(1000);
+    },1000);
+    // end of loader
+
     $('.accordion .title').click(function () {
        $(this).parent().toggleClass('active');
     });
