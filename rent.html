@@ -166,9 +166,10 @@
                                     </li>
                                     <li class="list-group-item py-0 px-2 border-0">
                                         <a href="#" class="sub-dropdown-menu text-dark px-1">پرایمر</a>
-                                    </li>  <li class="list-group-item py-0 px-2 border-0">
-                                    <a href="#" class="sub-dropdown-menu text-dark px-1">مدادابرو</a>
-                                </li>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">مدادابرو</a>
+                                    </li>
                                     <li class="list-group-item py-0 px-2 border-0">
                                         <a href="#" class="sub-dropdown-menu text-dark px-1">آکوا</a>
                                     </li>
@@ -278,9 +279,10 @@
                                     </li>
                                     <li class="list-group-item py-0 px-2 border-0">
                                         <a href="#" class="sub-dropdown-menu text-dark px-1">پرایمر</a>
-                                    </li>  <li class="list-group-item py-0 px-2 border-0">
-                                    <a href="#" class="sub-dropdown-menu text-dark px-1">مدادابرو</a>
-                                </li>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">مدادابرو</a>
+                                    </li>
                                     <li class="list-group-item py-0 px-2 border-0">
                                         <a href="#" class="sub-dropdown-menu text-dark px-1">آکوا</a>
                                     </li>
@@ -360,7 +362,8 @@
                                     </li>
                                     <div class="alert m-0 border-0 py-0 px-2">
                                         <i class="material-icons">keyboard_arrow_left</i>
-                                        <a href="#" class="sub-dropdown-title font-weight-bold">کامپیوتر و تجهیزات جانبی </a>
+                                        <a href="#" class="sub-dropdown-title font-weight-bold">کامپیوتر و تجهیزات
+                                            جانبی </a>
                                     </div>
                                     <li class="list-group-item py-0 px-2 border-0">
                                         <a href="#" class="sub-dropdown-menu text-dark px-1">تجهیزات مخصوص بازی</a>
@@ -508,7 +511,8 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a href="book.html" class="nav-link dropdown-toggle nav-item-font" data-toggle="dropdown">کتاب و مجله</a>
+                <a href="book.html" class="nav-link dropdown-toggle nav-item-font" data-toggle="dropdown">کتاب و
+                    مجله</a>
                 <div class="dropdown-menu m-0 w-100 custom-dropdown-menu">
                     <div class="container-fluid">
                         <div class="row w-100">
@@ -530,7 +534,7 @@
                 <a href="#" class="nav-link nav-item-font">گلخانه</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link nav-item-font">پیگیری سفارش</a>
+                <a href="order-track.html" class="nav-link nav-item-font">پیگیری سفارش</a>
             </li>
         </ul>
     </div>
@@ -627,9 +631,13 @@
                             <div class="icon mr-auto pl-3 d-flex">&times</div>
                         </div>
                         <div class="content p-3">
-                            <span class="font">100,000تومان</span>
-                            <span class="font float-left mt-2">5000تومان</span>
-                            <input type="range" class="custom-range" name="" value="0" min="0" max="100">
+                            <form action="">
+                                <div class="form-group">
+                                    <label class="font">1,000,000تومان</label>
+                                    <label class="font float-left mt-2">50,000تومان</label>
+                                    <input type="range" class="form-control-range">
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -639,14 +647,23 @@
                         <div class="toggle"></div>
                     </div>
                     <input type="checkbox" name="toggle">
-                    <label for="" class="mb-0">فقط کتاب های موجود</label>
+                    <label for="" class="mb-0">فقط کالاهای موجود</label>
                 </div>
             </div>
         </div>
         <div class="col-md-8 col-lg-9 mt-3">
+                <nav class="bg-white title-content">
+                    <ol class="breadcrumb px-1 py-0 mb-2">
+                        <a href="index.html"><li class="breadcrumb-item"></li>صفحه اصلی</a>
+                        <span class="divider text-secondary">/</span>
+                        <a href="book.html"><li class="breadcrumb-item"></li>کتاب و مجله</a>
+                        <span class="divider text-secondary">/</span>
+                        <a href="rent.html"><li class="breadcrumb-item"></li>اجاره کتاب</a>
+                    </ol>
+                </nav>
             <div class="book-list bg-white">
                 <div class="book-info">
-                    <div class="row p-3">
+                    <div class="row p-2">
                         <div class="col-4 col-md-3">
                             <a href="detail-rent-book.html"><img src="../assets/images/rent-book/book_1.jpg" alt=""></a>
                         </div>
@@ -664,39 +681,8 @@
                 <div class="book-info">
                     <div class="row p-3">
                         <div class="col-4 col-md-3">
-                            <a href="detail-rent-book.html"> <img src="../assets/images/rent-book/book_1.jpg" alt=""></a>
-                        </div>
-                        <div class="col-8 col-md-9">
-                            <p class="font-weight-bold book-title">Architectural Digest at 100: A Century of Style</p>
-                            <p class="mb-2">سال نشر : 2019</p>
-                            <p class="mb-2">نویسنده : Architectural Digest at 100: A Century of Style</p>
-                            <p>شابک : 9781419733338</p>
-                            <a href="detail-rent-book.html" class=" btn btn-info add-book text-white">افزودن به سبد</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="book-list bg-white">
-                <div class="book-info">
-                    <div class="row p-3">
-                        <div class="col-4 col-md-3">
-                            <a href="detail-rent-book.html"><img src="../assets/images/rent-book/book_1.jpg" alt=""></a>
-                        </div>
-                        <div class="col-8 col-md-9">
-                            <p class="font-weight-bold book-title">Architectural Digest at 100: A Century of Style</p>
-                            <p class="mb-2">سال نشر : 2019</p>
-                            <p class="mb-2">نویسنده : Architectural Digest at 100: A Century of Style</p>
-                            <p>شابک : 9781419733338</p>
-                            <a href="detail-rent-book.html" class=" btn btn-info add-book text-white">افزودن به سبد</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="book-list bg_1">
-                <div class="book-info">
-                    <div class="row p-3">
-                        <div class="col-4 col-md-3">
-                            <a href="detail-rent-book.html"> <img src="../assets/images/rent-book/book_1.jpg" alt=""></a>
+                            <a href="detail-rent-book.html"> <img src="../assets/images/rent-book/book_1.jpg"
+                                                                  alt=""></a>
                         </div>
                         <div class="col-8 col-md-9">
                             <p class="font-weight-bold book-title">Architectural Digest at 100: A Century of Style</p>
@@ -728,7 +714,8 @@
                 <div class="book-info">
                     <div class="row p-3">
                         <div class="col-4 col-md-3">
-                            <a href="detail-rent-book.html"> <img src="../assets/images/rent-book/book_1.jpg" alt=""></a>
+                            <a href="detail-rent-book.html"> <img src="../assets/images/rent-book/book_1.jpg"
+                                                                  alt=""></a>
                         </div>
                         <div class="col-8 col-md-9">
                             <p class="font-weight-bold book-title">Architectural Digest at 100: A Century of Style</p>
@@ -740,14 +727,57 @@
                     </div>
                 </div>
             </div>
-            <div class="btn-toolbar mt-3 justify-content-center ">
-                <div class="btn-group  bg-info">
-                    <button type="button" class="btn pages-number rounded-0">1</button>
-                    <button type="button" class="btn pages-number rounded-0">2</button>
-                    <button type="button" class="btn pages-number rounded-0">3</button>
-                    <button type="button" class="btn pages-number rounded-0">4</button>
+            <div class="book-list bg-white">
+                <div class="book-info">
+                    <div class="row p-3">
+                        <div class="col-4 col-md-3">
+                            <a href="detail-rent-book.html"><img src="../assets/images/rent-book/book_1.jpg" alt=""></a>
+                        </div>
+                        <div class="col-8 col-md-9">
+                            <p class="font-weight-bold book-title">Architectural Digest at 100: A Century of Style</p>
+                            <p class="mb-2">سال نشر : 2019</p>
+                            <p class="mb-2">نویسنده : Architectural Digest at 100: A Century of Style</p>
+                            <p>شابک : 9781419733338</p>
+                            <a href="detail-rent-book.html" class=" btn btn-info add-book text-white">افزودن به سبد</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="book-list bg_1">
+                <div class="book-info">
+                    <div class="row p-3">
+                        <div class="col-4 col-md-3">
+                            <a href="detail-rent-book.html"> <img src="../assets/images/rent-book/book_1.jpg"
+                                                                  alt=""></a>
+                        </div>
+                        <div class="col-8 col-md-9">
+                            <p class="font-weight-bold book-title">Architectural Digest at 100: A Century of Style</p>
+                            <p class="mb-2">سال نشر : 2019</p>
+                            <p class="mb-2">نویسنده : Architectural Digest at 100: A Century of Style</p>
+                            <p>شابک : 9781419733338</p>
+                            <a href="detail-rent-book.html" class=" btn btn-info add-book text-white">افزودن به سبد</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="pages">
+                <din class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="btn-toolbar d-flex justify-content-center">
+                                <div class="btn-group btn-group-sm mt-4">
+                                    <button type="button" class="btn btn-info"><</button>
+                                    <button type="button" class="btn btn-info">1</button>
+                                    <button type="button" class="btn btn-info">2</button>
+                                    <button type="button" class="btn btn-info">3</button>
+                                    <button type="button" class="btn btn-info">4</button>
+                                    <button type="button" class="btn btn-info">></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </din>
+            </section>
         </div>
     </div>
 </div>
@@ -877,6 +907,25 @@
     </div>
 </div>
 <!-- end of loader -->
+
+<script>
+    $(document).ready(function () {
+        let switches = document.querySelectorAll('.ios-switch');
+        for (let i = 0; i <= switches.length; i++) {
+            switches[i].addEventListener('click', function (event) {
+                if (this.classList.contains('active')) {
+                    this.classList.remove('active');
+                    this.querySelector('input[type=checkbox]').checked = false;
+                } else {
+                    this.classList.add('active');
+                    this.querySelector('input[type=checkbox]').checked = true;
+                }
+
+
+            })
+        }
+    })
+</script>
 
 </body>
 </html>

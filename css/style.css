@@ -997,7 +997,7 @@ nav ul li{
     color: #195a8e;
     background: transparent;
 }
-.box-nav-pills .dropdown{
+.box-nav-pills .nav-container{
     border-top: 2px solid #d3d9df;
 }
 .nav-pills .nav-item .nav-link:hover{
@@ -1162,31 +1162,6 @@ nav ol{
     left: 0;
     box-sizing: border-box;
 }
-/*.related-product-box{*/
-/*    box-shadow: 0 0 2px rgba(0,0,0,.12);*/
-/*    border: 1px solid #cddee2;*/
-/*    padding: 0 20px;*/
-/*}*/
-/*.related-product-box .text-product{*/
-/*    font-size: 12px;*/
-/*    font-weight: bold;*/
-/*    color: #195a8e;*/
-/*    text-align: center;*/
-/*}*/
-/*.related-product-box .add-to-card{*/
-/*    width: 100%;*/
-/*    height: 25px;*/
-/*    line-height: 25px;*/
-/*    float: left;*/
-/*    background: #38a7bb;*/
-/*    color: #fff;*/
-/*    padding: 0px 10px;*/
-/*    border-radius: 5px;*/
-/*    font-size: 11px;*/
-/*    text-align: center;*/
-/*}*/
-
-
 /* end product */
 .box-tabs .nav-link.active{
     background: #38a7bb;
@@ -1276,6 +1251,21 @@ nav ol{
     color: #195a8e;
 }
 /* styles of rent page */
+.title-content .breadcrumb{
+    background: #fff;
+    border-radius: 0;
+    font-size: 12px;
+    color: #195a8e;
+    border: 0;
+}
+.title-content .breadcrumb a{
+    font-size: 12px;
+    color: #195a8e;
+    line-height: 35px;
+}
+.title-content .breadcrumb span{
+    line-height: 25px;
+}
 .advertise-box{
     width: 150px;
     height: 150px;
