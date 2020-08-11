@@ -81,6 +81,10 @@ input:focus{
     font-size: 10px;
     font-family: vazir;
 }
+.btn::focus{
+    outline: 0!important;
+    box-shadow: none!important;
+}
 
 /* start of top header */
 #top-header{
@@ -163,6 +167,7 @@ input:focus{
 }
 .search-wrapper form input{
     font-size: 12px;
+    height: 45px;
 }
 .search-wrapper form input:focus{
     box-shadow: none;
@@ -171,7 +176,7 @@ input:focus{
 .search-icon.active{
     z-index: 99999;
     position: absolute;
-    top: 0;
+    top: 7px;
     left: 0;
 }
 /* end of top header*/
@@ -266,7 +271,7 @@ nav ul li{
 .owl-carousel-0 .owl-stage-outer{
     height: 412px;
 }
-.owl-carousel-0 .owl-nav{
+.owl-carousel-0 .owl-nav {
     position: absolute;
     top: 30%;
     right: 0;
@@ -274,7 +279,7 @@ nav ul li{
 }
 .owl-carousel-0 .owl-nav .owl-next{
     position: absolute;
-    left: -200px;
+    left: -240px;
     top: 0px;
 }
 .sidebar-text,.text-price{
@@ -545,7 +550,7 @@ nav ul li{
     height: 45px;
     width: 45px;
     position: relative;
-    animation: rotate .75s ease-in-out 0s infinite;
+    animation: rotate .75s 0s ease-in-out infinite;
 }
 .loader span{
     width: 20px;
@@ -613,13 +618,13 @@ nav ul li{
     background:#38a7bb ;
     color: #fff;
 }
-.category-searh{
+.category-searh form{
     position: relative;
 }
 .category-searh input{
     width: 95%;
     height: 35px;
-    padding: 0 20px;
+    margin: 0 auto;
     background: #fff;
     border: 1px solid #eee;
     border-radius: 20px;
@@ -627,8 +632,8 @@ nav ul li{
 }
 .category-searh button{
     position: absolute;
-    bottom: 3px;
-    left: 20px;
+    top: 55px;
+    left: 8%;
     border-radius: 50%;
     transform: rotate(90deg);
     background: transparent;
@@ -978,9 +983,23 @@ nav ul li{
 /* end of sidebar / category_1 */
 
 /* styles of content of category_1 */
-.sort{
-    color: #cecece;
-    font-size: 28px;
+.header-wrapper{
+    background: #fff!important;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.header-wrapper .custom-breadcrumb ol{
+    background: transparent;
+}
+.header-wrapper .custom-breadcrumb ol li a{
+    margin: 0 5px;
+    color: #000!important;
+    font-size: 12px!important;
+}
+.header-wrapper .custom-breadcrumb ol li .inactive{
+    color: #777!important;
 }
 .text-sort{
     color: #3b3b3b;
@@ -1040,7 +1059,7 @@ nav ul li{
 
 .full-product-box .product-box .product-box-footer .add-to-card{
     width: 100%;
-    height: 25px;
+    height: 23px;
     line-height: 25px;
     float: left;
     background: #38a7bb;
@@ -1291,6 +1310,34 @@ nav ol{
    background: #fff;
 }
 /* styles of detail-rent-book */
+.rent-header-wrapper{
+    background: #fff;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.rent-header-wrapper ol{
+    background: transparent;
+}
+.rent-header-wrapper ol li a{
+    font-size: 12px;
+    color: #000!important;
+    margin:5px;
+}
+.rent-header-wrapper ol li .inactive{
+    color: #777!important;
+}
+.rent-header-wrapper .title button{
+    background: #d3d9df;
+}
+.rent-header-wrapper .title button:focus{
+    outline: 0;
+    box-shadow: none;
+}
+.rent-nav-container{
+    border-top: 2px solid #d3d9df;
+}
 .main-content{
     border: 1px solid #d7dae2;
     border-radius: 3px;

@@ -1,0 +1,1292 @@
+<!doctype html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>خوردنی و آشامیدنی</title>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="../assets/css/bootstrap-rtl.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap-reboot-rtl.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/icon.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<style>
+    .right-banner-1{
+        background: #fff;
+    }
+    .right-banner-1 .title p{
+        font-size: 14px;
+        color: #fff;
+        background: #38a7bb;
+        line-height: 35px;
+        padding: 0 10px;
+    }
+    .right-banner-1 input{
+        font-size: 12px;
+        border-radius: 20px;
+        width: 96%;
+        display: flex;
+        margin: 0 auto;
+    }
+    .right-banner-1 input:focus{
+        outline: 0;
+        box-shadow: none;
+    }
+    .right-banner-1 form{
+        position: relative;
+    }
+    .right-banner-1 button{
+        position: absolute;
+        top: 13%;
+        left: 4%;
+        background: transparent;
+        border: 0;
+        transform: translate(-7%, -23%);
+        transform: rotate(90deg);
+    }
+    .right-banner-1 button i{
+        color: #777;
+    }
+    .accordion{
+        border-bottom: 1px solid #dfdfdf;
+    }
+    .right-banner-1 .sub-title{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        font-size: 13px;
+        font-weight: bold;
+        color: #195a8e;
+        margin: 5px 20px 0 20px;
+        cursor: pointer;
+    }
+    .right-banner-1 .icon-1{
+        font-size: 16px;
+        font-weight: bold;
+        transform: rotate(135deg);
+    }
+    .right-banner-1 .content-1 li a{
+        font-size: 11px;
+        color: #195a8e;
+        font-weight: bold;
+    }
+    .right-banner-1 .scrollbar::-webkit-scrollbar{
+        background: #dfdfdf;
+        width: 8px;
+        border-radius: 10px;
+        max-height: 0;
+        opacity: 0;
+    }
+    .right-banner-1 .scrollbar::-webkit-scrollbar-thumb{
+        background: #38a7bb;
+        border-radius: 10px;
+    }
+    .right-banner-1 .content-1 ul li:hover{
+        padding: 0 5px;
+    }
+    .right-banner-1 .content-1{
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all .5s;
+    }
+    .right-banner-1 .accordion.active .content-1{
+        max-height: 120px;
+        opacity: 1;
+    }
+    .right-banner-1 .accordion.active .scrollbar{
+        max-height: 120px;
+        opacity: 1;
+    }
+    .right-banner-1 .accordion.active .icon-1{
+        transform: rotate(90deg);
+    }
+    .box-nav-pills-container .title{
+        background: #fff;
+    }
+    .box-nav-pills-container .sort-1{
+        vertical-align: -8px;
+    }
+    .box-nav-pills-container .title span{
+        font-size: 12px;
+        color: #000;
+    }
+    .nav-container-1{
+        width: 100%;
+        border-top: 2px solid #d3d9df;
+    }
+.tab-pane .text-1{
+    font-size: 12px;
+    text-align: center;
+    color: #195a8e;
+    font-weight: bold;
+}
+    .tab-pane .text-1 span{
+        color: #38a7bb;
+    }
+    .tab-pane .footer input{
+    font-size: 10px;
+    }
+    .tab-pane .add-cart{
+        width: 100%;
+        display: block;
+        font-size: 12px;
+        background: #38a7bb;
+        line-height: 28px;
+        color: #fff;
+        border-radius: 3px;
+        text-align: center;
+    }
+    .full-product-box-1{
+        border-right: 1px solid #fafafa;
+        border-bottom: 1px solid #fafafa;
+    }
+    .custom-breadcrumb ol{
+        background: transparent;
+        border: 0;
+        font-size: 12px;
+        color: #000;
+    }
+    .custom-breadcrumb ol li{
+        margin: 0 3px;
+    }
+    .wrapper{
+        height: 40px;
+    }
+    .ios-switch-1 .switch-body{
+        width: 48px;
+        height: 20px;
+        background: #d9d6df;
+        border-radius: 20px;
+        margin: 5px;
+    }
+    .ios-switch-1 .switch-body .toggle-1{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #38a7bb;
+        float: left;
+        transition: all .5s;
+        cursor: pointer;
+    }
+    .ios-switch-1 input[type=checkbox]{
+        display: none;
+    }
+    .ios-switch-1 label{
+        font-size: 13px;
+        color: #195a8e;
+        font-weight: bold;
+    }
+    .ios-switch-1.active .switch-body{
+        background: #38a7bb;
+        transition: all .5s;
+    }
+    .ios-switch-1.active .switch-body .toggle-1{
+        transform: translateX(135%);
+    }
+
+</style>
+<body>
+<!-- start of top header -->
+<div class="container-fluid" id="top-header">
+    <div class="row">
+        <div class="col-2 col-md-6">
+            <div class="mr-2 mt-2" id="logo">
+                <a href="index.html"><h3>LSHOP</h3></a>
+            </div>
+        </div>
+        <div class="col-10 col-md-6">
+            <div class="d-flex justify-content-end mt-2" id="top-header-left">
+                <div class="search-icon"></div>
+                <span class="text-muted mt-1 font-weight-bolder">|</span>
+                <div id="shopping-cart">
+                    <a href="shopping-cart.html" class="text-light"><i class="fa fa-shopping-cart ml-1"></i>سبد خرید</a>
+                </div>
+                <span class="text-muted mt-1 font-weight-bolder"> |</span>
+                <div id="login-signup">
+                    <a href="login.html" class="text-light"><i class="fa fa-user text-light ml-1"></i>ورود </a>
+                    <span class="text-light"> |</span>
+                    <a href="signup.html" class="text-light">ثبت نام</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- search wrapper -->
+<div class="search-wrapper">
+    <input type="text" class="form-control rounded-0" placeholder="جستجو...">
+</div>
+
+<!-- start of main menu -->
+<nav class="navbar navbar-expand-md py-0 navbar-color">
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#main-nav">
+        <span class="navbar-toggler-icon">
+            <i class="material-icons" style="vertical-align: -12px">dehaze</i>
+        </span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-nav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="category.html" class="nav-link nav-item-font">سوپر مارکت</a>
+            </li>
+            <li class="nav-item">
+                <a href="category.html" class="nav-link dropdown-toggle nav-item-font" data-toggle="dropdown">زیبایی و سلامت</a>
+                <div class="dropdown-menu w-100 m-0 custom-dropdown-menu">
+                    <div class="container-fluid">
+                        <div class="row w-100">
+                            <div class="col-12 col-md-3">
+                                <div class="alert m-0 border-0 py-0 px-2">
+                                    <i class="material-icons">keyboard_arrow_left</i>
+                                    <a href="#" class="sub-dropdown-title font-weight-bold">آرایش ناخن</a>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">ناخن گیر و گوشه گیر</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">لاک</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">لاک پاک کن</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">سوهان ناخن</a>
+                                    </li>
+                                    <div class="alert m-0 border-0 py-0 px-2">
+                                        <i class="material-icons">keyboard_arrow_left</i>
+                                        <a href="#" class="sub-dropdown-title font-weight-bold">آرایش لب</a>
+                                    </div>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">رژلب مایع</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">رژلب جامد</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">بالم لب</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="alert m-0 border-0 py-0 px-2">
+                                    <i class="material-icons">keyboard_arrow_left</i>
+                                    <a href="#" class="sub-dropdown-title font-weight-bold">آرایش چشم</a>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">فرموژه</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">ریمل</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">مداد چشم</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">خط چشم</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کانسیلر</a>
+                                    </li>
+                                    <div class="alert m-0 border-0 py-0 px-2">
+                                        <i class="material-icons">keyboard_arrow_left</i>
+                                        <a href="#" class="sub-dropdown-title font-weight-bold">آرایش مو</a>
+                                    </div>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">اکسیدان</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">رنگ مو</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">اسپری مو</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <ul class="list-group">
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">ژل مو</a>
+                                    </li>
+                                    <div class="alert m-0 border-0 py-0 px-2">
+                                        <i class="material-icons">keyboard_arrow_left</i>
+                                        <a href="#" class="sub-dropdown-title font-weight-bold">آرایش صورت</a>
+                                    </div>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">پد آرایشی</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">ضدآفتاب</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کزم پودر</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">پنکیک</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">رژگونه</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">پرایمر</a>
+                                    </li>  <li class="list-group-item py-0 px-2 border-0">
+                                    <a href="#" class="sub-dropdown-menu text-dark px-1">مدادابرو</a>
+                                </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">آکوا</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="category.html" class="nav-link dropdown-toggle nav-item-font" data-toggle="dropdown">خانه و آشپزخانه</a>
+                <div class="dropdown-menu m-0 w-100 custom-dropdown-menu">
+                    <div class="container-fluid">
+                        <div class="row w-100">
+                            <div class="col-12 col-md-3">
+                                <div class="alert m-0 border-0 py-0 px-2">
+                                    <i class="material-icons">keyboard_arrow_left</i>
+                                    <a href="#" class="sub-dropdown-title font-weight-bold">آرایش ناخن</a>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">ناخن گیر و گوشه گیر</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">لاک</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">لاک پاک کن</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">سوهان ناخن</a>
+                                    </li>
+                                    <div class="alert m-0 border-0 py-0 px-2">
+                                        <i class="material-icons">keyboard_arrow_left</i>
+                                        <a href="#" class="sub-dropdown-title font-weight-bold">آرایش لب</a>
+                                    </div>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">رژلب مایع</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">رژلب جامد</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">بالم لب</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="alert m-0 border-0 py-0 px-2">
+                                    <i class="material-icons">keyboard_arrow_left</i>
+                                    <a href="#" class="sub-dropdown-title font-weight-bold">آرایش چشم</a>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">فرموژه</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">ریمل</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">مداد چشم</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">خط چشم</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کانسیلر</a>
+                                    </li>
+                                    <div class="alert m-0 border-0 py-0 px-2">
+                                        <i class="material-icons">keyboard_arrow_left</i>
+                                        <a href="#" class="sub-dropdown-title font-weight-bold">آرایش مو</a>
+                                    </div>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">اکسیدان</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">رنگ مو</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">اسپری مو</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <ul class="list-group">
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">ژل مو</a>
+                                    </li>
+                                    <div class="alert m-0 border-0 py-0 px-2">
+                                        <i class="material-icons">keyboard_arrow_left</i>
+                                        <a href="#" class="sub-dropdown-title font-weight-bold">آرایش صورت</a>
+                                    </div>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">پد آرایشی</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">ضدآفتاب</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کزم پودر</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">پنکیک</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">رژگونه</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">پرایمر</a>
+                                    </li>  <li class="list-group-item py-0 px-2 border-0">
+                                    <a href="#" class="sub-dropdown-menu text-dark px-1">مدادابرو</a>
+                                </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">آکوا</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="category.html" class="nav-link dropdown-toggle nav-item-font" data-toggle="dropdown">کالای دیجیتال</a>
+                <div class="dropdown-menu m-0 w-100 custom-dropdown-menu">
+                    <div class="container-fluid">
+                        <div class="row w-100">
+                            <div class="col-12 col-md-3">
+                                <div class="alert m-0 border-0 py-0 px-2">
+                                    <i class="material-icons">keyboard_arrow_left</i>
+                                    <a href="#" class="sub-dropdown-title font-weight-bold">لوازم جانبی گوشی</a>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کیف و کاور گوشی</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">پاوربانک</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">پایه نگهدارنده گوشی</a>
+                                    </li>
+                                    <div class="alert m-0 border-0 py-0 px-2">
+                                        <i class="material-icons">keyboard_arrow_left</i>
+                                        <a href="#" class="sub-dropdown-title font-weight-bold">گوشی موبایل</a>
+                                    </div>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">سامسونگ</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">وآوی</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">اپل</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">عانر</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">شیائومی</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">نوکیا</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="alert m-0 border-0 py-0 px-2">
+                                    <i class="material-icons">keyboard_arrow_left</i>
+                                    <a href="#" class="sub-dropdown-title font-weight-bold">لوازم جانبی </a>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">دوربین</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">لنز</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کارت حافظه</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کیف</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کاغذ چاپ عکس</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">دوربین دو چشمی و شکاری</a>
+                                    </li>
+                                    <div class="alert m-0 border-0 py-0 px-2">
+                                        <i class="material-icons">keyboard_arrow_left</i>
+                                        <a href="#" class="sub-dropdown-title font-weight-bold">کامپیوتر و تجهیزات جانبی </a>
+                                    </div>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">تجهیزات مخصوص بازی</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">مانیتور</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <ul class="list-group">
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کیس های اسمبل شده</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">قطعات داخلی کامپیوتر</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">موس</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کیبورد</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">لپ تاپ</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کیف و کوله و کاور</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کابل صدا</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">تبلت</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">شارژر موبایل و تبلت</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">دوربین های تحت شبکه</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="category.html" class="nav-link dropdown-toggle nav-item-font" data-toggle="dropdown">مدوپوشاک</a>
+                <div class="dropdown-menu m-0 w-100 custom-dropdown-menu">
+                    <div class="container-fluid">
+                        <div class="row w-100">
+                            <div class="col-12 col-md-3">
+                                <div class="alert m-0 border-0 py-0 px-2">
+                                    <i class="material-icons">keyboard_arrow_left</i>
+                                    <a href="#" class="sub-dropdown-title font-weight-bold">پوشاک زنانه</a>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">پالتو</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">مانتو</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">دامن</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">پیراهن</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">لباس راحتی</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کفش و کتونی</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کمربند</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">جوراب</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">اکسسوری زنانها</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="alert m-0 border-0 py-0 px-2">
+                                    <i class="material-icons">keyboard_arrow_left</i>
+                                    <a href="#" class="sub-dropdown-title font-weight-bold">پوشاک مردانه</a>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کت و شلوار</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">لباس راحتی</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کفش و کتونی</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کمربند</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">جوراب</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">اکسسوری مردانه</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="alert m-0 border-0 py-0 px-2">
+                                    <i class="material-icons">keyboard_arrow_left</i>
+                                    <a href="#" class="sub-dropdown-title font-weight-bold">پوشاک دخترانه</a>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">لباس راحتی</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">دامن</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">شلوار</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">کلاه</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">عینک</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">لباس عروسکی</a>
+                                    </li>
+                                    <li class="list-group-item py-0 px-2 border-0">
+                                        <a href="#" class="sub-dropdown-menu text-dark px-1">لباس اسپرتا</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="book.html" class="nav-link dropdown-toggle nav-item-font" data-toggle="dropdown">کتاب و مجله</a>
+                <div class="dropdown-menu m-0 w-100 custom-dropdown-menu">
+                    <div class="container-fluid">
+                        <div class="row w-100">
+                            <div class="col-12 col-md-3">
+                                <div class="alert m-0 border-0 py-0 px-2">
+                                    <i class="material-icons">keyboard_arrow_left</i>
+                                    <a href="book.html" class="sub-dropdown-title font-weight-bold">خرید کتاب</a>
+                                </div>
+                                <div class="alert m-0 border-0 py-0 px-2">
+                                    <i class="material-icons">keyboard_arrow_left</i>
+                                    <a href="rent.html" class="sub-dropdown-title font-weight-bold">اجاره کتاب</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="category.html" class="nav-link nav-item-font">گلخانه</a>
+            </li>
+            <li class="nav-item">
+                <a href="order-track.html" class="nav-link nav-item-font">پیگیری سفارش</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- end of header -->
+
+<!-- start of sidebar -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-4 col-xl-3">
+            <section class="right-banner-1 mt-3">
+                <div class="title">
+                    <p>دسته بندی کالاهای سوپرمارکتی</p>
+                </div>
+                <div class="search-1">
+                    <form action="">
+                        <input type="text" class="form-control" placeholder="محصول مورد نظر خود را بیابید...">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="accrodions">
+                    <div class="accordion">
+                        <div class="sub-title">
+                            <p class="mt-1">خوارو بار</p>
+                            <span class="icon-1 ml-1">&times;</span>
+                        </div>
+                        <div class="content-1">
+                            <ul class="pr-4">
+                               <div class="scrollbar">
+                                   <li><a href="">نان</a></li>
+                                   <li><a href="">نان</a></li>
+                                   <li><a href="">نان</a></li>
+                                   <li><a href="">نان</a></li>
+                                   <li><a href="">نان</a></li>
+                                   <li><a href="">نان</a></li>
+                                   <li><a href="">نان</a></li>
+                                   <li><a href="">نان</a></li>
+                                   <li><a href="">نان</a></li>
+                                   <li><a href="">نان</a></li>
+                               </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="sub-title">
+                            <p class="mt-1"> محدوده قیمت</p>
+                            <span class="icon-1 ml-1">&times;</span>
+                        </div>
+                        <div class="content-1">
+                            <form action="">
+                                <div class="form-group">
+                                    <label for="">1,0000,000 تومان</label>
+                                    <label for="" class="float-left">5,000 تومان</label>
+                                    <input type="range" class="form-control-range bg-white">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+<!--                    ios switch -->
+                    <div class="ios-switch active d-flex">
+                        <div class="switch-body">
+                            <div class="toggle"></div>
+                        </div>
+                        <input type="checkbox" name="toggle">
+                        <label for="" class="mt-1">فقط کالاهای موجود</label>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-12 col-md-8 col-xl-9 box-nav-pills-container">
+            <div class="wrapper d-flex justify-content-between align-items-baseline bg-white mt-3">
+                <nav class="custom-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">فحه اصلی</li>
+                        <span class="text-secondary">/</span>
+                        <li class="breadcrumb-item">فحه اصلی</li>
+                        <span class="text-secondary">/</span>
+                        <li class="breadcrumb-item">فحه اصلی</li>
+                    </ol>
+                </nav>
+                <div class="title p-1">
+                    <span>مرتب سازی براساس :</span>
+                    <button type="button" class="btn btn-sm px-3 text-secondary" data-toggle="collapse" data-target="#nav-pill">
+                        -----
+                        <span class="fa fa-caret-down text-secondary"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="box-nav-pills-1">
+                <ul class="nav nav-pills collapse bg-white" id="nav-pill">
+                    <div class="nav-container-1">
+                        <li class="nav-item"><a href="#pills-1" class="nav-link rounded-0" data-toggle="pill">پرفروش ترین ها</a></li>
+                        <li class="nav-item"><a href="#pills-2" class="nav-link rounded-0" data-toggle="pill">کم فروش ترین ها</a></li>
+                        <li class="nav-item"><a href="#pills-3" class="nav-link rounded-0" data-toggle="pill">محبوب ترین ها</a></li>
+                        <li class="nav-item"><a href="#pills-4" class="nav-link rounded-0" data-toggle="pill">گران ترین ها</a></li>
+                        <li class="nav-item"><a href="#pills-5" class="nav-link rounded-0" data-toggle="pill">ارزان ترین ها</a></li>
+                    </div>
+                </ul>
+                <div class="tab-content bg-white mt-2">
+                    <div class="tab-pane fade show active" id="pills-1">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-4 col-xl-3 full-product-box-1">
+                                    <a href=""><img src="../assets/images/category_1/egg_1.jpg" class="img-fluid" alt=""></a>
+                                    <div class="text-1">
+                                        <p class="mb-1">تخم مرغ پایتخت بسته 6 عددی</p>
+                                        <span>10500 تومان</span>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-4 p-1">
+                                                    <form action="">
+                                                        <input type="number" class="form-control p-1" value="1" min="1" max="100" step="1">
+                                                    </form>
+                                                </div>
+                                                <div class="col-8 mt-1 p-0">
+                                                    <a href="" class="add-cart">افزودن به سبد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-xl-3 full-product-box-1">
+                                    <a href=""><img src="../assets/images/category_1/egg_1.jpg" class="img-fluid" alt=""></a>
+                                    <div class="text-1">
+                                        <p class="mb-1">تخم مرغ پایتخت بسته 6 عددی</p>
+                                        <span>10500 تومان</span>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-4 p-1">
+                                                    <form action="">
+                                                        <input type="number" class="form-control p-1" value="1" min="1" max="100" step="1">
+                                                    </form>
+                                                </div>
+                                                <div class="col-8 mt-1 p-0">
+                                                    <a href="" class="add-cart">افزودن به سبد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-xl-3 full-product-box-1">
+                                    <a href=""><img src="../assets/images/category_1/egg_1.jpg" class="img-fluid" alt=""></a>
+                                    <div class="text-1">
+                                        <p class="mb-1">تخم مرغ پایتخت بسته 6 عددی</p>
+                                        <span>10500 تومان</span>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-4 p-1">
+                                                    <form action="">
+                                                        <input type="number" class="form-control p-1" value="1" min="1" max="100" step="1">
+                                                    </form>
+                                                </div>
+                                                <div class="col-8 mt-1 p-0">
+                                                    <a href="" class="add-cart">افزودن به سبد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-xl-3 full-product-box-1">
+                                    <a href=""><img src="../assets/images/category_1/egg_1.jpg" class="img-fluid" alt=""></a>
+                                    <div class="text-1">
+                                        <p class="mb-1">تخم مرغ پایتخت بسته 6 عددی</p>
+                                        <span>10500 تومان</span>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-4 p-1">
+                                                    <form action="">
+                                                        <input type="number" class="form-control p-1" value="1" min="1" max="100" step="1">
+                                                    </form>
+                                                </div>
+                                                <div class="col-8 mt-1 p-0">
+                                                    <a href="" class="add-cart">افزودن به سبد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-xl-3 full-product-box-1">
+                                    <a href=""><img src="../assets/images/category_1/egg_1.jpg" class="img-fluid" alt=""></a>
+                                    <div class="text-1">
+                                        <p class="mb-1">تخم مرغ پایتخت بسته 6 عددی</p>
+                                        <span>10500 تومان</span>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-4 p-1">
+                                                    <form action="">
+                                                        <input type="number" class="form-control p-1" value="1" min="1" max="100" step="1">
+                                                    </form>
+                                                </div>
+                                                <div class="col-8 mt-1 p-0">
+                                                    <a href="" class="add-cart">افزودن به سبد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-xl-3 full-product-box-1">
+                                    <a href=""><img src="../assets/images/category_1/egg_1.jpg" class="img-fluid" alt=""></a>
+                                    <div class="text-1">
+                                        <p class="mb-1">تخم مرغ پایتخت بسته 6 عددی</p>
+                                        <span>10500 تومان</span>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-4 p-1">
+                                                    <form action="">
+                                                        <input type="number" class="form-control p-1" value="1" min="1" max="100" step="1">
+                                                    </form>
+                                                </div>
+                                                <div class="col-8 mt-1 p-0">
+                                                    <a href="" class="add-cart">افزودن به سبد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-xl-3 full-product-box-1">
+                                    <a href=""><img src="../assets/images/category_1/egg_1.jpg" class="img-fluid" alt=""></a>
+                                    <div class="text-1">
+                                        <p class="mb-1">تخم مرغ پایتخت بسته 6 عددی</p>
+                                        <span>10500 تومان</span>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-4 p-1">
+                                                    <form action="">
+                                                        <input type="number" class="form-control p-1" value="1" min="1" max="100" step="1">
+                                                    </form>
+                                                </div>
+                                                <div class="col-8 mt-1 p-0">
+                                                    <a href="" class="add-cart">افزودن به سبد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-xl-3 full-product-box-1">
+                                    <a href=""><img src="../assets/images/category_1/egg_1.jpg" class="img-fluid" alt=""></a>
+                                    <div class="text-1">
+                                        <p class="mb-1">تخم مرغ پایتخت بسته 6 عددی</p>
+                                        <span>10500 تومان</span>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-4 p-1">
+                                                    <form action="">
+                                                        <input type="number" class="form-control p-1" value="1" min="1" max="100" step="1">
+                                                    </form>
+                                                </div>
+                                                <div class="col-8 mt-1 p-0">
+                                                    <a href="" class="add-cart">افزودن به سبد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade show " id="pills-2">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-4 col-xl-3 full-product-box-1">
+                                    <a href=""><img src="../assets/images/category_1/susis.jpg" class="img-fluid" alt=""></a>
+                                    <div class="text-1">
+                                        <p class="mb-1">تخم مرغ پایتخت بسته 6 عددی</p>
+                                        <span>10500 تومان</span>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-4 p-1">
+                                                    <form action="">
+                                                        <input type="number" class="form-control p-1" value="1" min="1" max="100" step="1">
+                                                    </form>
+                                                </div>
+                                                <div class="col-8 mt-1 p-0">
+                                                    <a href="" class="add-cart">افزودن به سبد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade show " id="pills-3">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-4 col-xl-3 full-product-box-1">
+                                    <a href=""><img src="../assets/images/category_1/susis_1.jpg" class="img-fluid" alt=""></a>
+                                    <div class="text-1">
+                                        <p class="mb-1">تخم مرغ پایتخت بسته 6 عددی</p>
+                                        <span>10500 تومان</span>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-4 p-1">
+                                                    <form action="">
+                                                        <input type="number" class="form-control p-1" value="1" min="1" max="100" step="1">
+                                                    </form>
+                                                </div>
+                                                <div class="col-8 mt-1 p-0">
+                                                    <a href="" class="add-cart">افزودن به سبد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade show " id="pills-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-4 col-xl-3 full-product-box-1">
+                                    <a href=""><img src="../assets/images/category_1/susis_2.jpg" class="img-fluid" alt=""></a>
+                                    <div class="text-1">
+                                        <p class="mb-1">تخم مرغ پایتخت بسته 6 عددی</p>
+                                        <span>10500 تومان</span>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-4 p-1">
+                                                    <form action="">
+                                                        <input type="number" class="form-control p-1" value="1" min="1" max="100" step="1">
+                                                    </form>
+                                                </div>
+                                                <div class="col-8 mt-1 p-0">
+                                                    <a href="" class="add-cart">افزودن به سبد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade show " id="pills-5">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-4 col-xl-3 full-product-box-1">
+                                    <a href=""><img src="../assets/images/category_1/egg_1.jpg" class="img-fluid" alt=""></a>
+                                    <div class="text-1">
+                                        <p class="mb-1">تخم مرغ پایتخت بسته 6 عددی</p>
+                                        <span>10500 تومان</span>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-4 p-1">
+                                                    <form action="">
+                                                        <input type="number" class="form-control p-1" value="1" min="1" max="100" step="1">
+                                                    </form>
+                                                </div>
+                                                <div class="col-8 mt-1 p-0">
+                                                    <a href="" class="add-cart">افزودن به سبد</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid bg-dark">
+    <div class="row">
+        <div class="col-2 col-md-6">
+            <div class="logo"><h3>LSHOP</h3></div>
+        </div>
+        <div class="col-10 col-md-6">
+            <div class="topbar-left">
+                <div class="search-icon-2"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of sidebar -->
+<!-- start of footer -->
+<div class="container-fluid footer-container mt-5">
+    <div class="row">
+        <div class="col-6 col-md-3 mt-4">
+            <a href="#"><span class="text-white font-weight-bold text-info">راهنمای خرید از لایوشاپ</span></a>
+            <ul class="list-group border-0">
+                <a href="#"><li class="list-group-item border-0 rounded-0 pr-0 text-footer text-white">رویه ارسال سفارش</li></a>
+                <a href="#"><li class="list-group-item border-0 rounded-0 pr-0 text-footer text-white">نحوه ی ثبت سفارش</li></a>
+                <a href="#"><li class="list-group-item border-0 rounded-0 pr-0 text-footer text-white">شیوه های پرداخت</li></a>
+                <a href="#"><li class="list-group-item border-0 rounded-0 pr-0 text-footer text-white">مکاری با تامین کنندگان</li></a>
+            </ul>
+        </div>
+        <div class="col-6 col-md-3 mt-4">
+            <a href="#"><span class="text-white font-weight-bold text-info">خدمات مشتریان</span></a>
+            <ul class="list-group border-0">
+                <a href="#"><li class="list-group-item border-0 rounded-0 pr-0 text-footer text-white">پاسخ به پرسش های متداول</li></a>
+                <a href="#"><li class="list-group-item border-0 rounded-0 pr-0 text-footer text-white">رویه های بازگرداندن کالا</li></a>
+                <a href="#"><li class="list-group-item border-0 rounded-0 pr-0 text-footer text-white">حریم خصوصی</li></a>
+                <a href="#"><li class="list-group-item border-0 rounded-0 pr-0 text-footer text-white">شرایط حمل و نقل</li></a>
+            </ul>
+        </div>
+        <div class="col-6 col-md-3 mt-4">
+            <a href="#"><span class="text-white font-weight-bold text-info">تماس با ما</span></a>
+            <ul class="list-group border-0">
+                <li class="list-group-item border-0 rounded-0 pr-0 text-footer text-white">تلفن تماس: 54595000 (021)</li>
+                <li class="list-group-item border-0 rounded-0 pr-0 text-footer text-white">آدرس: خیابان ولیعصر، بالاتر از بهشتی، نبش بن بست پردیس، پلاک 2089، طبقه 4، واحد 4</li>
+                <a href="#"><li class="list-group-item border-0 rounded-0 pr-0 text-footer text-white">ایمیل: info@okala.com</li></a>
+            </ul>
+        </div>
+        <div class="col-6 col-md-3 mt-4">
+            <a href="#"><span class="text-white font-weight-bold text-info">از تخفیف ها و جدیدترین های لایو شاپ با خبر شوید.</span></a>
+            <div class="input-group mt-2 ">
+                <input type="text" class="form-control" placeholder="آدرس ایمیل خود را وارد کنید...">
+                <div class="input-group-append" style="cursor: pointer">
+                    <div class="input-group-text">ارسال</i></div>
+                </div>
+            </div>
+            <div class="social-media-wrapper mt-4">
+                <div class="text">ما را در شبکه های اجتماعی دنبال کنید</div>
+                <a href="#"><i class="fa fa-twitter fa-fw"></i></a>
+                <a href="#"><i class="fa fa-facebook fa-fw"></i></a>
+                <a href="#"><i class="fa fa-instagram fa-fw"></i></a>
+                <a href="#"><i class="fa fa-google-plus fa-fw"></i></a>
+                <a href="#"><i class="fa fa-github fa-fw"></i></a>
+            </div>
+
+        </div>
+    </div>
+    <hr class="bg-info">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <p class="text-white font-weight-bold">فروشگاه اینترنتی لایوشاپ، بررسی، انتخاب و خرید آنلاین</p>
+            <p class="sub-footer-text">لایوشاپ به عنوان یکی از قدیمی‌ترین فروشگاه های اینترنتی با بیش از یک دهه تجربه، با پایبندی به سه اصل، پرداخت در محل، 7 روز ضمانت بازگشت کالا و تضمین اصل‌بودن کالا موفق شده تا همگام با فروشگاه‌های معتبر جهان، به بزرگ‌ترین فروشگاه اینترنتی ایران تبدیل شود. به محض ورود به سایت لایوشاپ با دنیایی از کالا رو به رو می‌شوید! هر آنچه که نیاز دارید و به ذهن شما خطور می‌کند در اینجا پیدا خواهید کرد.</p>
+        </div>
+        <div class="col-12 col-md-6 d-flex mt-2 mb-2">
+            <div class="col-3 col-md-3 d-flex">
+                <img src="../assets/images/neshan.png" alt="" class="w-100 d-block img-fluid bg-footer rounded" style="height: 100px">
+            </div>
+            <div class="col-3 d-flex">
+                <img src="../assets/images/senfi.png" alt="" class="w-100 d-block img-fluid bg-footer rounded" style="height: 100px">
+            </div>
+            <div class="col-3 d-flex">
+                <img src="../assets/images/enamad.png" alt="" class="w-100 d-block img-fluid bg-footer rounded" style="height: 100px">
+            </div>
+            <div class="col-3 d-flex">
+                <img src="../assets/images/ecunion.png" alt="" class="w-100 d-block img-fluid bg-footer rounded" style="height: 100px">
+            </div>
+        </div>
+    </div>
+    <div class="row sub-footer-bg">
+        <div class="col-12">
+            <p class="text-center text-white font pt-3"> کلیه حقوق مادی و معنوی این سایت محفوظ و متعلق به شرکت توسعه تجارت الکترونیک کوروش است. ۱۳۹۶ ©
+                توسعه توسط گلرنگ سیستم
+            </p>
+        </div>
+    </div>
+</div>
+<!-- end of footer -->
+
+<!-- loader -->
+<div class="loader-wrapper">
+    <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<!-- end loader -->
+
+<style>
+    .search-icon-2{
+        width: 40px;
+        height: 30px;
+        position: relative;
+    }
+    .search-icon-2::after{
+        content: '';
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 2px solid #eee;
+        position: absolute;
+        top: 10px;
+        left: 0;
+    }
+    .search-icon-2::before{
+        content: '';
+        width: 10px;
+        height: 2px;
+        transform: rotate(45deg);
+        background: #eee;
+        position: absolute;
+        top: 24px;
+        left: 10px;
+    }
+ .loader-wrapper{
+     background: #eee;
+     width: 100%;
+     height: 100%;
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+ }
+    .loader{
+        width: 45px;
+        height: 45px;
+        position: relative;
+    }
+    .loader span{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .loader span:nth-child(1){
+        background: red;
+    }
+    .loader span:nth-child(2){
+        background: yellow;
+        transform: translate(25px , 0);
+    }
+    .loader span:nth-child(3){
+        background: green;
+        transform: translate(0px , 25px);
+    }
+    .loader span:nth-child(4){
+        background: blue;
+        transform: translate(25px,25px);
+    }
+    @keyframes anim {
+        50%,60%{
+            transform: scale(1.2) translate(12.5px,12.5px);
+        }
+    }
+    @keyframes rotate {
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+</style>
+<!-- bootstrap js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../assets/js/jquery.simple.timer.js"></script>
+<script src="../assets/js/bootstrap.js"></script>
+<script src="../assets/js/custom.js"></script>
+<script src="../assets/js/owl.carousel.min.js"></script>
+<script>
+    $(document).ready(function () {
+        let switche = document.querySelectorAll('.ios-switch-1');
+        for (let i =0; i <= switche.length ; i++){
+            switche[i].addEventListener('click',function () {
+                if (this.classList.contain('active')){
+                    this.classList.remove('active');
+                    this.querySelector('input[type=checkbox]').checked = false;
+                }else{
+                    this.classList.add('active');
+                    this.querySelector('input[type=checkbox]').checked = true;
+                }
+            })
+        }
+        $('.search-icon-2').click(function () {
+$('.search-icon-2').toggleClass('active');
+        })
+    })
+</script>
+</body>
+</html>
